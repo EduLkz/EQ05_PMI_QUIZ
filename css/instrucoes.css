@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .container{
+    margin: 60px 0 40px 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.instrucaoProva{
+    width: 600px;
+    display: inline;
+    margin: auto 20px;
+    align-items: center;
+}
+
+section h1{
+    font-family: 'Aref Ruqaa Ink', serif;
+    color: rgb(48, 132, 163);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section ol li{
+    text-align: justify;
+    margin-bottom: 5px;
+    font-size: 120%;
+}
+
+section img{
+    height: 450px;
+}
+
+.instrucaoProva a button{
+    background-color: rgb(48, 132, 163);
+    border: solid rgb(48, 132, 163);
+    padding: 15px;
+    border-radius: 10%;
+    color: white;
+    font-family: 'Aref Ruqaa Ink', serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.instrucaoProva a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+section a button:hover{
+    background-color:rgba(48, 132, 163, 0.459);
+    color: rgb(48, 132, 163);
+    font-weight: bolder;
+    border: rgba(48, 132, 163, 0.459);
+}

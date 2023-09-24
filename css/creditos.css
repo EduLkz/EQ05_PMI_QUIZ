@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .container{
+    margin: 60px 0 40px 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 200%;
+    color: rgb(48, 132, 163);
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
+.textocreditos{
+    width: 600px;
+    display: inline;
+    margin: auto 20px;
+    align-items: center;
+}
+
+.textocreditos p{
+    text-align: justify;
+}
+
+section img{
+    height: 450px;
+}

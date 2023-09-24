@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 14</title>
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/questao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logoheader">
+                <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
+                <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" title="Vá para o Início">Início</a>
+                    </li>
+                    <li>
+                        <a href="../instrucoes.html" title="Vá para as Instruções do Simulado">Instruções</a>
+                    </li>
+                    <li>
+                        <a href="../sobre.html" title="Saiba mais">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../creditos.html" title="">Créditos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="questao">
+                <div id="questao-num"> 
+                    <p>14</p>
+                </div>
+                <div class="pergunta">
+                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
+                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
+                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
+                    <!-- class="pergunta-texto impar unico" -->
+                    <div class="pergunta-texto impar unico"> 
+                        <img src="../imagens/questoes/14.png" alt="Great Gatsby discussion questions">
+                        <div class="fonte">
+                            <br>
+                            Available at: https://padlet.com/gallery/d089g44sbg8w. Access on: 30 may 2020.
+                        </div>
+                    </div>
+
+
+                    <div class="enunciado">
+                        <p>Considering the text above, analyze the following statements.
+                            <br>I. The digital tool used by the teacher allowed students to respond to literature in personal and
+                            meaningful ways.
+                            <br>II. The use of technology brings a totally different way to approach literary works, discarding the
+                            previous one.
+                            <br>III. Teacher used the digital tool as a resource to supplement and enrich the content traditionally
+                            presented in the classroom.
+                            <br>IV. Online literary discussion enhances student’s confidence as they can post their comments
+                            anonymously.
+                            <br><br>
+                            The correct statement or statements is/are
+                        </p>
+                    </div>
+                </div>
+                <div id="respostas">
+                    <!-- Colocar as alternativas na ordem correta -->
+                    <button class="alternativa" id="a">
+                        a) II, only.
+                    </button>
+                    <button class="alternativa" id="b">
+                        b) I and III, only.
+                    </button>
+                    <button class="alternativa" id="c">
+                        c) II and IV, only.
+                    </button>
+                    <button class="alternativa" id="d">
+                        d) I, III and IV, only.
+                    </button>
+                    <button class="alternativa" id="e">
+                        e) I, II, III and IV.
+                    </button>
+                </div>
+                <div class="fonte">
+                    fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
+                </div>
+                <div class="acoes">
+                    <button id="finalizar" class="botao-base">Finalizar</button>
+                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div id="nav-botoes">
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                </div>
+                <div id="nav-numeros">
+                    <button class="botao-base">1</button>
+                    <button class="botao-base">2</button>
+                    <button class="botao-base">3</button>
+                    <button class="botao-base">4</button>
+                    <button class="botao-base">5</button>
+                    <button class="botao-base">6</button>
+                    <button class="botao-base">7</button>
+                    <button class="botao-base">8</button>
+                    <button class="botao-base">9</button>
+                    <button class="botao-base">10</button>
+                    <button class="botao-base">11</button>
+                    <button class="botao-base">12</button>
+                    <button class="botao-base">13</button>
+                    <button class="botao-base">14</button>
+                    <button class="botao-base">15</button>
+                    <button class="botao-base">16</button>
+                    <button class="botao-base">17</button>
+                    <button class="botao-base">18</button>
+                    <button class="botao-base">19</button>
+                    <button class="botao-base">20</button>
+                    <button class="botao-base">21</button>
+                    <button class="botao-base">22</button>
+                    <button class="botao-base">23</button>
+                    <button class="botao-base">24</button>
+                    <button class="botao-base">25</button>
+                    <button class="botao-base">26</button>
+                    <button class="botao-base">27</button>
+                    <button class="botao-base">28</button>
+                    <button class="botao-base">29</button>
+                    <button class="botao-base">30</button>
+                    <button class="botao-base">31</button>
+                    <button class="botao-base">32</button>
+                    <button class="botao-base">33</button>
+                    <button class="botao-base">34</button>
+                    <button class="botao-base">35</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog>
+        <div class="content">
+            <div id="correta">
+                <h1> Resposta Correta</h1>
+                <img src="../imagens/astronautas/astro-questao-certa.png">
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-correta-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+            <div id="errada">
+                <h1> Resposta Errada</h1>
+                <img src="../imagens/astronautas/astro-questao-errada.png">
+                <p>A resposta sua resposta foi:</p>
+                <span><p id="resposta-sua-texto"></p></span>
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-errada-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
+                </li>
+                <li>
+                    <a href="https://www.fateccarapicuiba.edu.br/" title="Vá para site da FATEC Carapicuiba"><img src="../imagens/footer/logoFatec.png" alt="Logo FATEC Carapicuiba"></a>
+                </li>
+                <li>
+                    <a href="https://www.cps.sp.gov.br/" title="Vá para site do CPS"><img src="../imagens/footer/Logo-CPS.jpg" alt="Logo CPS"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="../app.js"></script>
+</html>

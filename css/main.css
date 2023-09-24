@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+section button{
+    background-color: rgb(48, 132, 163);
+    border: solid rgb(48, 132, 163);
+    padding: 5px;
+    border-radius: 10%;
+    color: white;
+    padding: 15px;
+    font-family: 'Aref Ruqaa Ink', serif;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+section h1,
+section h2{
+    color: rgb(48, 132, 163);
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
+section h1{
+    color: rgb(48, 132, 163);
+}
+
+section img{
+    height: 450px;
+    margin: 30px 20px;
+}
+
+.containertexto{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    height: 450px;
+}
+
+.containertexto a button:hover{
+    background-color:rgba(48, 132, 163, 0.459);
+    color: rgb(48, 132, 163);
+    font-weight: bold;
+    border: rgba(48, 132, 163, 0.459);
+}
+

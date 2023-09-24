@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 18</title>
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/questao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logoheader">
+                <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
+                <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" title="Vá para o Início">Início</a>
+                    </li>
+                    <li>
+                        <a href="../instrucoes.html" title="Vá para as Instruções do Simulado">Instruções</a>
+                    </li>
+                    <li>
+                        <a href="../sobre.html" title="Saiba mais">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../creditos.html" title="">Créditos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="questao">
+                <div id="questao-num"> 
+                    <p>18</p>
+                </div>
+                <div class="pergunta">
+                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
+                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
+                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
+                    <!-- class="pergunta-texto impar unico" -->
+                    <div class="pergunta-texto impar"> 
+                        <h2> Texto I</h2>
+                        <p> <span>Xaxado</span> é neto de um famoso cangaceiro que vivia com o bando de Lampião. Sensível, alegre e sempre
+                            atento às belezas e aos problemas da vida no campo, Xaxado é como um sol ao redor do qual circulam
+                            todas as outras personagens e histórias da turma.<br><br>
+                            <span>Zé Pequeno</span> tem fama de ser um menino preguiçoso, que passa o dia inteiro dormindo, mas isso não é
+                            verdade. Quem conhece Zé sabe que ele também fica pescando, ouvindo música, namorando, inventando
+                            desculpa pra não ir pra aula, tomando banho no rio, subindo em árvore, passeando de jumento, fugindo
+                            do trabalho... </p>
+                        <div class="fonte">
+                            <br>
+                            Disponível em: http://turmadoxaxado.blogspot.com/2008/12/conhea-turma-do-xaxado.html. Acesso em: 22 maio 2020 (adaptado).
+                        </div>
+                    </div>
+                    <div class="pergunta-texto par"> <!-- Caso só tenha um texto, remover essa div -->
+                        <h2> Texto II </h2>
+                        <img src="../imagens/questoes/18.png" alt="rinha-antonio-cedraz-turma-do-xanxado">
+                        <div class="fonte">
+                            <br>
+                            Disponível em: http://fw.atarde.uol.com.br/2014/09/tirinha-antonio-cedraz-turma-do-xanxado_1446745.jpg.
+                            <br>Acesso em: 22 mai. 2020 (adaptado).
+                        </div>
+                    </div>
+
+                    <div class="enunciado">
+                        <p>Considerando os processos de variação linguística e a relação entre as diferentes formas de uso da
+                            linguagem e seu significado social, é correto afirmar que tanto a forma variante “divia” quanto a
+                            forma “pêxe”</p>
+                    </div>
+                </div>
+                <div id="respostas">
+                    <!-- Colocar as alternativas na ordem correta -->
+                    <button class="alternativa" id="a">
+                        a) exemplificam o mesmo fenômeno variável, a síncope, e em ambos apenas o nível fonético é afetado
+                        pela variação em relação à norma culta da Língua Portuguesa.
+                    </button>
+                    <button class="alternativa" id="b">
+                        b) ajudam a caracterizar Zé Pequeno como membro de uma comunidade de fala mais próxima do polo
+                        rural do contínuo rural-urbano, mas não são fenômenos restritos a este polo e, portanto, não podem
+                        ser considerados estereótipos dos falares rurais.
+                    </button>
+                    <button class="alternativa" id="c">
+                        c) representam formas variantes altamente estigmatizadas no português urbano culto, tanto no meio
+                        oral quanto no meio escrito, e que são quase exclusivas do polo rural do contínuo rural-urbano.
+                    </button>
+                    <button class="alternativa" id="d">
+                        d) ilustram erros de ortografia associados aos maus hábitos de pronúncia que devem ser corrigidos nas
+                        escolas.
+                    </button>
+                    <button class="alternativa" id="e">
+                        e) caracterizam, respectivamente, os falares de grupos com baixo poder aquisitivo e de grupos mais
+                        próximos ao polo rural do contínuo rural-urbano.
+                    </button>
+                </div>
+                <div class="fonte">
+                    fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
+                </div>
+                <div class="acoes">
+                    <button id="finalizar" class="botao-base">Finalizar</button>
+                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div id="nav-botoes">
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                </div>
+                <div id="nav-numeros">
+                    <button class="botao-base">1</button>
+                    <button class="botao-base">2</button>
+                    <button class="botao-base">3</button>
+                    <button class="botao-base">4</button>
+                    <button class="botao-base">5</button>
+                    <button class="botao-base">6</button>
+                    <button class="botao-base">7</button>
+                    <button class="botao-base">8</button>
+                    <button class="botao-base">9</button>
+                    <button class="botao-base">10</button>
+                    <button class="botao-base">11</button>
+                    <button class="botao-base">12</button>
+                    <button class="botao-base">13</button>
+                    <button class="botao-base">14</button>
+                    <button class="botao-base">15</button>
+                    <button class="botao-base">16</button>
+                    <button class="botao-base">17</button>
+                    <button class="botao-base">18</button>
+                    <button class="botao-base">19</button>
+                    <button class="botao-base">20</button>
+                    <button class="botao-base">21</button>
+                    <button class="botao-base">22</button>
+                    <button class="botao-base">23</button>
+                    <button class="botao-base">24</button>
+                    <button class="botao-base">25</button>
+                    <button class="botao-base">26</button>
+                    <button class="botao-base">27</button>
+                    <button class="botao-base">28</button>
+                    <button class="botao-base">29</button>
+                    <button class="botao-base">30</button>
+                    <button class="botao-base">31</button>
+                    <button class="botao-base">32</button>
+                    <button class="botao-base">33</button>
+                    <button class="botao-base">34</button>
+                    <button class="botao-base">35</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog>
+        <div class="content">
+            <div id="correta">
+                <h1> Resposta Correta</h1>
+                <img src="../imagens/astronautas/astro-questao-certa.png">
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-correta-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+            <div id="errada">
+                <h1> Resposta Errada</h1>
+                <img src="../imagens/astronautas/astro-questao-errada.png">
+                <p>A resposta sua resposta foi:</p>
+                <span><p id="resposta-sua-texto"></p></span>
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-errada-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
+                </li>
+                <li>
+                    <a href="https://www.fateccarapicuiba.edu.br/" title="Vá para site da FATEC Carapicuiba"><img src="../imagens/footer/logoFatec.png" alt="Logo FATEC Carapicuiba"></a>
+                </li>
+                <li>
+                    <a href="https://www.cps.sp.gov.br/" title="Vá para site do CPS"><img src="../imagens/footer/Logo-CPS.jpg" alt="Logo CPS"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="../app.js"></script>
+</html>

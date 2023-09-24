@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5 </title>
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/questao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logoheader">
+                <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
+                <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" title="Vá para o Início">Início</a>
+                    </li>
+                    <li>
+                        <a href="../instrucoes.html" title="Vá para as Instruções do Simulado">Instruções</a>
+                    </li>
+                    <li>
+                        <a href="../sobre.html" title="Saiba mais">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../creditos.html" title="">Créditos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="questao">
+                <div id="questao-num"> 
+                    <p>5</p>
+                </div>
+                <div class="pergunta">
+                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
+                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
+                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
+                    <!-- class="pergunta-texto impar unico" -->
+                    <div class="pergunta-texto impar"> 
+                        <h2> <!-- Titulo do texto 1 --> TEXTO I </h2>
+                        <p> <!-- Conteudo do texto 1 -->  Segundo o Ministério da Saúde, em 2017 o Brasil registrou uma média nacional de 5,7 óbitos para
+                            100 mil habitantes. Na população indígena, foi registrado um número de óbitos três vezes maior que
+                            a média nacional – 15,2. Destes registros, 44,8% (aproximadamente, 6,8 óbitos), são suicídios de
+                            crianças e adolescentes entre 10 e 19 anos. Esses dados contrastam com o panorama nacional,
+                            em que o maior índice é entre adolescentes e adultos de 15 a 20 anos.
+                        </p>
+                        <div class="fonte">
+                            <br>
+                            <!-- fonte do texto, remover caso não tenha -->
+                            <!-- usar tag <span></span> para colocar em negrito parte do texto -->
+                            <span>
+                                Disponível em: htt ps://www.cvv.org.br/blog/o-suicidio-do-povo-indigena/. Acesso em: 30 de abr. 2020 (adaptado).
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pergunta-texto par"> <!-- Caso só tenha um texto, remover essa div -->
+                        <h2> <!-- Titulo do texto 2 --> TEXTO II</h2>
+                        <p> <!-- Conteudo do texto 2 --> Evidências apontam que, em determinadas minorias étnico-raciais, como os indígenas (aborígines ou
+                            populações nati vas), o suicídio entre crianças apresenta taxas bem mais elevadas do que as observadas
+                            na população geral. No Brasil, o enforcamento foi uti lizado mais frequentemente entre indígenas do que
+                            entre não indígenas, não se observando, no primeiro grupo, suicídios por intoxicação ou por armas de
+                            fogo. O mapa a seguir apresenta a distribuição dos óbitos por suicídio entre crianças e adolescentes
+                            indígenas no Brasil, entre os anos de 2010 e 2014. <br>
+                            <img src="../imagens/questoes/05.jpg" alt="">
+                        </p>
+                        <div class="fonte">
+                            <br>
+                            <!-- fonte do texto, remover caso não tenha -->
+                            <!-- usar tag <span></span> para colocar em negrito parte do texto -->
+                            <span>
+                                SOUZA, M. Mortalidade por suicídio entre crianças indígenas no Brasil. Caderno de Saúde Pública, v.35, Rio de Janeiro, 2019 (adaptado).
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="enunciado">
+                        <p><!-- Colocar a pergunta em si --> Considerando as informações apresentadas e o alto índice de suicídio da população indígena, avalie as
+                            afirmações a seguir. <br>
+                            I. O elevado índice de suicídios entre crianças e adolescentes indígenas no país evidencia a
+                            necessidade de ações com foco nos direitos fundamentais desses indivíduos. <br>
+                            II. Os estados do Pará e de Tocanti ns são os que possuem os maiores índices de suicídio de indígenas
+                            na faixa etária de 10 a 14 anos. <br>
+                            III. Os povos das tribos originárias do Brasil, no que tange a sua história e preservação cultural,
+                            não estão amparados por direitos e garantias constitucionais. <br>
+                            IV. O estabelecimento de ações preventi vas ao suicídio nas comunidades indígenas deve considerar
+                            os elementos globais que afetam a população em geral, na faixa etária entre 15 e 20 anos. <br>
+                             É correto apenas o que se afirma em
+                        </p>
+                    </div>
+                </div>
+                <div id="respostas">
+                    <!-- Colocar as alternativas na ordem correta -->
+                    <button class="alternativa" id="a">
+                        a)  I.
+                    </button>
+                    <button class="alternativa" id="b">
+                        b) II.
+                    </button>
+                    <button class="alternativa" id="c">
+                        c) I e III.
+                    </button>
+                    <button class="alternativa" id="d">
+                        d) I e IV.
+                    </button>
+                    <button class="alternativa" id="e">
+                        e) III e IV.
+                    </button>
+                </div>
+                <div class="fonte">
+                    fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
+                </div>
+                <div class="acoes">
+                    <button id="finalizar" class="botao-base">Finalizar</button>
+                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div id="nav-botoes">
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                </div>
+                <div id="nav-numeros">
+                    <button class="botao-base">1</button>
+                    <button class="botao-base">2</button>
+                    <button class="botao-base">3</button>
+                    <button class="botao-base">4</button>
+                    <button class="botao-base">5</button>
+                    <button class="botao-base">6</button>
+                    <button class="botao-base">7</button>
+                    <button class="botao-base">8</button>
+                    <button class="botao-base">9</button>
+                    <button class="botao-base">10</button>
+                    <button class="botao-base">11</button>
+                    <button class="botao-base">12</button>
+                    <button class="botao-base">13</button>
+                    <button class="botao-base">14</button>
+                    <button class="botao-base">15</button>
+                    <button class="botao-base">16</button>
+                    <button class="botao-base">17</button>
+                    <button class="botao-base">18</button>
+                    <button class="botao-base">19</button>
+                    <button class="botao-base">20</button>
+                    <button class="botao-base">21</button>
+                    <button class="botao-base">22</button>
+                    <button class="botao-base">23</button>
+                    <button class="botao-base">24</button>
+                    <button class="botao-base">25</button>
+                    <button class="botao-base">26</button>
+                    <button class="botao-base">27</button>
+                    <button class="botao-base">28</button>
+                    <button class="botao-base">29</button>
+                    <button class="botao-base">30</button>
+                    <button class="botao-base">31</button>
+                    <button class="botao-base">32</button>
+                    <button class="botao-base">33</button>
+                    <button class="botao-base">34</button>
+                    <button class="botao-base">35</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog>
+        <div class="content">
+            <div id="correta">
+                <h1> Resposta Correta</h1>
+                <img src="../imagens/astronautas/astro-questao-certa.png">
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-correta-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+            <div id="errada">
+                <h1> Resposta Errada</h1>
+                <img src="../imagens/astronautas/astro-questao-errada.png">
+                <p>A resposta sua resposta foi:</p>
+                <span><p id="resposta-sua-texto"></p></span>
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-errada-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
+                </li>
+                <li>
+                    <a href="https://www.fateccarapicuiba.edu.br/" title="Vá para site da FATEC Carapicuiba"><img src="../imagens/footer/logoFatec.png" alt="Logo FATEC Carapicuiba"></a>
+                </li>
+                <li>
+                    <a href="https://www.cps.sp.gov.br/" title="Vá para site do CPS"><img src="../imagens/footer/Logo-CPS.jpg" alt="Logo CPS"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="../app.js"></script>
+</html>

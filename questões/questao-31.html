@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 31</title>
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/questao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logoheader">
+                <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
+                <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" title="Vá para o Início">Início</a>
+                    </li>
+                    <li>
+                        <a href="../instrucoes.html" title="Vá para as Instruções do Simulado">Instruções</a>
+                    </li>
+                    <li>
+                        <a href="../sobre.html" title="Saiba mais">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../creditos.html" title="">Créditos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="questao">
+                <div id="questao-num"> 
+                    <p>31</p>
+                </div>
+                <div class="pergunta">
+                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
+                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
+                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
+                    <!-- class="pergunta-texto impar unico" -->
+                    <div class="pergunta-texto impar unico"> 
+                        <p> Os quilombolas, compreendidos também como
+                            povos ou comunidades tradicionais, exigem que
+                            as políti cas públicas a eles desti nadas considerem
+                            a sua inter-relação com as dimensões históricas,
+                            políti cas, econômicas, sociais, culturais e
+                            educacionais que acompanham a consti tuição
+                            dos quilombos no Brasil. Consequentemente,
+                            a Educação Escolar Quilombola não pode ser
+                            pensada somente se levando em conta os
+                            aspectos normati vos, burocráti cos e insti tucionais
+                            relacionados à confi guração das políti cas
+                            educacionais. A sua implementação deverá
+                            ser sempre acompanhada de consulta prévia e
+                            realizada pelo poder público junto às comunidades
+                            quilombolas e suas organizações. </p>
+                        <div class="fonte">
+                            <br>
+                            <!-- fonte do texto, remover caso não tenha -->
+                            <!-- usar tag <span></span> para colocar em negrito parte do texto -->
+                            BRASIL/CNE. <span>Parecer Cne/CeB n. 16/2012</span>. Diretrizes Curriculares
+                            <bR>Nacionais para a Educação Escolar Quilombola, 2012 (adaptado)
+                        </div>
+                    </div>
+
+                    <div class="enunciado">
+                        <p>
+                            Considerando o texto e as discussões sobre políticas
+                            de articulação escola/comunidade quilombola,
+                            avalie as afirmações a seguir.
+                            <br><br>I. A relação entre educação e movimento
+                            sociais na educação quilombola objetiva
+                            adequar essa organização cultural ao
+                            sistema educacional.
+                            <br>II. A história, a memória, o território, a
+                            ancestralidade e os conhecimentos
+                            tradicionais da comunidade quilombola são
+                            aspectos considerados na garantia do direito
+                            à educação quilombola.
+                            <br>III. O papel da comunidade quilombola é
+                            determinante nos processos decisórios
+                            acerca da educação escolar a ser nela
+                            implementada.
+                            <br><br>É correto o que se afirma em:
+                        </p>
+                    </div>
+                </div>
+                <div id="respostas">
+                    <!-- Colocar as alternativas na ordem correta -->
+                    <button class="alternativa" id="a">
+                        a) I, apenas.
+                    </button>
+                    <button class="alternativa" id="b">
+                        b) II, apenas.
+                    </button>
+                    <button class="alternativa" id="c">
+                        c) I e III, apenas.
+                    </button>
+                    <button class="alternativa" id="d">
+                        d) II e III, apenas.
+                    </button>
+                    <button class="alternativa" id="e">
+                        e) I, II e III.
+                    </button>
+                </div>
+                <div class="fonte">
+                    fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
+                </div>
+                <div class="acoes">
+                    <button id="finalizar" class="botao-base">Finalizar</button>
+                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div id="nav-botoes">
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                </div>
+                <div id="nav-numeros">
+                    <button class="botao-base">1</button>
+                    <button class="botao-base">2</button>
+                    <button class="botao-base">3</button>
+                    <button class="botao-base">4</button>
+                    <button class="botao-base">5</button>
+                    <button class="botao-base">6</button>
+                    <button class="botao-base">7</button>
+                    <button class="botao-base">8</button>
+                    <button class="botao-base">9</button>
+                    <button class="botao-base">10</button>
+                    <button class="botao-base">11</button>
+                    <button class="botao-base">12</button>
+                    <button class="botao-base">13</button>
+                    <button class="botao-base">14</button>
+                    <button class="botao-base">15</button>
+                    <button class="botao-base">16</button>
+                    <button class="botao-base">17</button>
+                    <button class="botao-base">18</button>
+                    <button class="botao-base">19</button>
+                    <button class="botao-base">20</button>
+                    <button class="botao-base">21</button>
+                    <button class="botao-base">22</button>
+                    <button class="botao-base">23</button>
+                    <button class="botao-base">24</button>
+                    <button class="botao-base">25</button>
+                    <button class="botao-base">26</button>
+                    <button class="botao-base">27</button>
+                    <button class="botao-base">28</button>
+                    <button class="botao-base">29</button>
+                    <button class="botao-base">30</button>
+                    <button class="botao-base">31</button>
+                    <button class="botao-base">32</button>
+                    <button class="botao-base">33</button>
+                    <button class="botao-base">34</button>
+                    <button class="botao-base">35</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog>
+        <div class="content">
+            <div id="correta">
+                <h1> Resposta Correta</h1>
+                <img src="../imagens/astronautas/astro-questao-certa.png">
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-correta-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+            <div id="errada">
+                <h1> Resposta Errada</h1>
+                <img src="../imagens/astronautas/astro-questao-errada.png">
+                <p>A resposta sua resposta foi:</p>
+                <span><p id="resposta-sua-texto"></p></span>
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-errada-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
+                </li>
+                <li>
+                    <a href="https://www.fateccarapicuiba.edu.br/" title="Vá para site da FATEC Carapicuiba"><img src="../imagens/footer/logoFatec.png" alt="Logo FATEC Carapicuiba"></a>
+                </li>
+                <li>
+                    <a href="https://www.cps.sp.gov.br/" title="Vá para site do CPS"><img src="../imagens/footer/Logo-CPS.jpg" alt="Logo CPS"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="../app.js"></script>
+</html>

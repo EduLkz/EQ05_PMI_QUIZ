@@ -1,0 +1,68 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .container{
+    display: flex;
+    padding-top: 60px;
+    flex-direction: column;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 200%;
+    color: rgb(48, 132, 163);
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
+.texto{
+    display: inline-flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.texto img{
+    height: 250px;
+    border-radius: 50%;
+}
+
+.texto p{
+    margin: 5px 40px;
+    text-align: justify;
+    font-size: 115%;
+}
+
+section a button {
+    background-color: rgb(48, 132, 163);
+    color: white;
+    border-radius: 15%;
+    margin: 20px 10px;
+    height: 40px;
+    width: 200px;
+    border: solid rgb(48, 132, 163);
+    font-size: 17px;
+}
+
+section a button:hover{
+    background-color:rgba(48, 132, 163, 0.459);
+    color: rgb(48, 132, 163);
+    font-weight: bolder;
+    border: rgba(48, 132, 163, 0.459);
+}
+
+section ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    
+}

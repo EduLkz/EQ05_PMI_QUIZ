@@ -1,0 +1,264 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    align-content: center;
+    width: 95vw;
+}
+
+.nav{
+    width: 250px;
+    min-width: 250px;
+    margin-left: 15px;
+}
+
+#nav-botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#nav-botoes button{
+    width: 110px;
+    height: 35px;
+}
+
+.botao-base{
+    border: none;
+    cursor: pointer;
+    background-color: #D3D3D3;
+}
+
+.botao-base:hover,
+.botao-base:focus{
+    border: none;
+    cursor: pointer;
+    background-color: #8EBDF3;
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+}
+
+.botao-base:active{
+    border: none;
+    cursor: pointer;
+    background-color: #df7631;
+    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
+}
+
+#nav-numeros{
+    background-color: rgb(48, 132, 163);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+#nav-numeros button{
+    border: none;
+    width: 35px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#prev{
+    border-top-left-radius: 8px;
+}
+
+#next{
+    border-top-right-radius: 8px;
+}
+
+.questao{
+    min-width: 70vw;
+    padding: 0 15px 0 10px;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid black;
+}
+
+.questao img{
+    min-width: 50%;
+    max-width: 90%;
+}
+
+#questao-num{
+    background-color: rgb(48, 132, 163);
+    padding: 10px 15px;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.pergunta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start space-evenly;
+    
+}
+
+.pergunta-texto{
+    max-width: calc(50% - 20px);
+    padding: 10px;
+}
+
+.fonte{
+    text-align: right;
+    font-size: 80%;
+}
+
+span{
+    font-weight: bold;
+}
+
+.unico{
+    min-width: 95.7%;
+    padding: 20px;
+}
+
+.impar{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.par{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+.pergunta-texto p{
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: .95em;
+    text-align: justify;
+}
+
+.enunciado{
+    margin: 20px 0 10px 0;
+    padding-left: 15px;
+}
+
+#respostas{
+    margin-top: 20px;
+}
+
+#respostas button{
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 5px;    
+    cursor: pointer;
+}
+
+#respostas .alternativa{
+    background-color: transparent;
+}
+
+#respostas .alternativa:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#respostas .alternativa:active{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+
+
+#respostas .selecionada{
+    background-color: rgba(0, 0, 0, 0.75);
+    color:white;
+
+}
+
+#respostas .selecionada:hover{
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+#respostas .selecionada:active{
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+
+
+.acoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 50vw;
+    align-self: center;
+}
+
+.acoes button{
+    width: 200px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#parar{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#confirmar{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+dialog{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none;
+}
+
+dialog .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog #correta{
+    background-color: rgb(124, 204, 124);
+    width: 60vw;
+    
+    border-radius: 25px;
+    box-shadow: 0px 20px 35px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 35px;
+    color: #222;
+}
+
+dialog #errada{
+    background-color: rgb(204, 124, 124);
+    width: 60vw;
+    
+    border-radius: 25px;
+    box-shadow: 0px 20px 35px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 35px;
+    color: #222;
+}
+
+dialog img{
+    height: 250px;
+}
+
+dialog p {
+    margin: 10px;
+}
+
+dialog .acoes{
+    width: 60%;
+}

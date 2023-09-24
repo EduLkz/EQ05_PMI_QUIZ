@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 25</title>
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/questao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logoheader">
+                <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
+                <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" title="Vá para o Início">Início</a>
+                    </li>
+                    <li>
+                        <a href="../instrucoes.html" title="Vá para as Instruções do Simulado">Instruções</a>
+                    </li>
+                    <li>
+                        <a href="../sobre.html" title="Saiba mais">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../creditos.html" title="">Créditos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="questao">
+                <div id="questao-num"> 
+                    <p>25</p>
+                </div>
+                <div class="pergunta">
+                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
+                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
+                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
+                    <!-- class="pergunta-texto impar unico" -->
+                    <div class="pergunta-texto impar unico"> 
+                        <p> O professor de Português é visto como alguém a quem compete apenas o ensino da gramática, de onde se deriva sua identidade de caçador de erros, para os quais se deve ter sempre a indicação da resposta correta. Apesar das inúmeras dificuldades existentes no domínio do ensino-aprendizagem, faz-se urgente atribuir uma nova identidade pedagógico-social ao professor de línguas.</p>
+
+                        <p>Um professor aberto a redescobertas propiciadas por novas perspectivas e por novos parâmetros teóricos e metodológicos, interessado em procurar e em reivindicar meios de ampliar suas competências e superar seu sentimento de insegurança. É preciso também que ele esteja disposto a reformular seus objetivos de ensino e, consequentemente, seus programas de ensino, acreditando que existem novas demandas sociais, novas formas e meios de produção e circulação da informação.</p>
+
+                        <p>Um professor que saiba articular o que pretende ensinar com as reais necessidades de seus alunos. Neste sentido, pode-se pensar em quanto tempo já se gastou com o ensino de definições e classificações gramaticais desprovidas de qualquer tipo de contextualização ou funcionalidade. </p>
+
+                        <p>Assim, é importante uma educação linguística pela qual as pessoas tenham a oportunidade de perceber a força e poder da linguagem, sua importância na construção das identidades dos indivíduos e sua função nas mudanças sociais e culturais.</p>
+
+                        <div class="fonte">
+                            <br>
+                            <!-- fonte do texto, remover caso não tenha -->
+                            <!-- usar tag <span></span> para colocar em negrito parte do texto -->
+                            ANTUNES, I. O professor de língua: a urgência de programas de formação que lhe garantam um nova identidade pedagógico-social.  In. CHAGURI, J; TONELLI, J.R. (Org.). 
+                            <span> Perspectivas Educacionais e Ensino de Línguas.</span> Londrina: Editora Eduel. 2014, p. 195-208 (adaptado)
+                        </div>
+                    </div>
+
+                    <div class="enunciado">
+                        <p>
+                            Com base nas informações apresentadas no texto é correto afirmar que:
+                        </p>
+                    </div>
+                </div>
+                <div id="respostas">
+                    <!-- Colocar as alternativas na ordem correta -->
+                    <button class="alternativa" id="a">
+                        a) o professor de português, na atualidade, oportuniza experiências com a linguagem, possibilitando que 
+                        os alunos interajam e dialoguem a partir de estratégias de leitura e escrita recorrentes.
+                    </button>
+                    <button class="alternativa" id="b">
+                        b) o ensino de português nas escolas tem conotação plural, seguindo os programas de ensino e as 
+                        prerrogativas de documentos oficiais, possibilitando a formação de aprendizes competentes.
+                    </button>
+                    <button class="alternativa" id="c">
+                        c) o professor, através de sua formação inicial, possibilita a inserção dos alunos em práticas de leitura e 
+                        escrita que formam cidadãos capazes de acessar o código linguístico escrito ou falado.
+                    </button>
+                    <button class="alternativa" id="d">
+                        d) os objetivos e os programas de ensino devem estar alinhados com as novas demandas sociais, com as 
+                        formas de circulação e produção da informação e às reais necessidades dos alunos.
+                    </button>
+                    <button class="alternativa" id="e">
+                        e) a educação linguística atual oferece ao indivíduo uma formação plural, que o leva a entender que a 
+                        língua falada age como uma contraparte da escrita, sendo usadas em momentos distintos.
+                    </button>
+                </div>
+                <div class="fonte">
+                    fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
+                </div>
+                <div class="acoes">
+                    <button id="finalizar" class="botao-base">Finalizar</button>
+                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div id="nav-botoes">
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                </div>
+                <div id="nav-numeros">
+                    <button class="botao-base">1</button>
+                    <button class="botao-base">2</button>
+                    <button class="botao-base">3</button>
+                    <button class="botao-base">4</button>
+                    <button class="botao-base">5</button>
+                    <button class="botao-base">6</button>
+                    <button class="botao-base">7</button>
+                    <button class="botao-base">8</button>
+                    <button class="botao-base">9</button>
+                    <button class="botao-base">10</button>
+                    <button class="botao-base">11</button>
+                    <button class="botao-base">12</button>
+                    <button class="botao-base">13</button>
+                    <button class="botao-base">14</button>
+                    <button class="botao-base">15</button>
+                    <button class="botao-base">16</button>
+                    <button class="botao-base">17</button>
+                    <button class="botao-base">18</button>
+                    <button class="botao-base">19</button>
+                    <button class="botao-base">20</button>
+                    <button class="botao-base">21</button>
+                    <button class="botao-base">22</button>
+                    <button class="botao-base">23</button>
+                    <button class="botao-base">24</button>
+                    <button class="botao-base">25</button>
+                    <button class="botao-base">26</button>
+                    <button class="botao-base">27</button>
+                    <button class="botao-base">28</button>
+                    <button class="botao-base">29</button>
+                    <button class="botao-base">30</button>
+                    <button class="botao-base">31</button>
+                    <button class="botao-base">32</button>
+                    <button class="botao-base">33</button>
+                    <button class="botao-base">34</button>
+                    <button class="botao-base">35</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog>
+        <div class="content">
+            <div id="correta">
+                <h1> Resposta Correta</h1>
+                <img src="../imagens/astronautas/astro-questao-certa.png">
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-correta-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+            <div id="errada">
+                <h1> Resposta Errada</h1>
+                <img src="../imagens/astronautas/astro-questao-errada.png">
+                <p>A resposta sua resposta foi:</p>
+                <span><p id="resposta-sua-texto"></p></span>
+                <p>A resposta correta era:</p>
+                <span><p id="resposta-errada-texto"></p></span>
+                <div class="acoes">
+                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
+                </li>
+                <li>
+                    <a href="https://www.fateccarapicuiba.edu.br/" title="Vá para site da FATEC Carapicuiba"><img src="../imagens/footer/logoFatec.png" alt="Logo FATEC Carapicuiba"></a>
+                </li>
+                <li>
+                    <a href="https://www.cps.sp.gov.br/" title="Vá para site do CPS"><img src="../imagens/footer/Logo-CPS.jpg" alt="Logo CPS"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="../app.js"></script>
+</html>
