@@ -1,0 +1,50 @@
+section .container{
+    display: flex;
+    margin-bottom: 60px;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 1280px;
+    width: 100%;
+    margin: 0;
+}
+
+.resultados{
+    color: white;
+    background-color: rgb(48, 132, 163);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 50px;
+    margin: 10px 0;
+}
+
+.graficos{
+    margin: 10px 0;
+}
+
+
+img{
+    max-width: 450px;
+}
+
+.valores{
+    color: white;
+    font-size: 2em;
+}
+
+.valores #acerto{
+    color: rgb(54, 235, 54);
+    font-weight: bolder;
+}
+
+.valores #erro{
+    color: rgb(250, 38, 38);
+    font-weight: bolder;
+}
+
+td{
+    padding: 5px 20px;
+}

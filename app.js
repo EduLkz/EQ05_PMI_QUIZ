@@ -76,6 +76,10 @@ function prevQuestion(){
     window.location.href = "/questões/questao-" + (questaoNum - 1) + ".html";
 }
 
+function finalizar(){
+    window.location.href = "/resultado.html";
+}
+
 function setAlternativaSelecionada(alt){
     if(!alt) return;
 

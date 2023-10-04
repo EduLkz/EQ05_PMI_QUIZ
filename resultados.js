@@ -1,5 +1,3 @@
-const div = document.getElementById("stats");
-
 const allQuestions = [
     [1, 'e', [0.03, 0.18, 0.48, 0.09, 0.22]],
     [2, 'c', [0.64, 0.08, 0.15, 0.02, 0.11]],
@@ -37,17 +35,17 @@ const allQuestions = [
     [34, 'c', [0.52, 0.26, 0.1, 0.0, 0.12]],
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
+const graphDiv = document.getElementById('graficos');
 
-function drawGraphs(question){
+function createGraphs(question, answer, valuesAnswers){
     var xArray = ["A", "B", "C", "D", "E"];
+	var yArray = valuesAnswers;
+
     var markerColor = [];
 
     for (let index = 0; index < 5; index++) {
         markerColor.push('rgb(204, 124, 124)');
     }
-   
-    var answer = allQuestions[question][1];
-	var yArray = allQuestions[question][2];
 
     switch (answer) {
         case 'a':
@@ -68,24 +66,26 @@ function drawGraphs(question){
             break;
     }
 
-    var layout = {
-        title:"<b>QUESTÃO " + (question + 1) + "</b>",
-        paper_bgcolor: 'rgba(0, 0, 0, 0)',
-        plot_bgcolor: '#e1e1e1',
-    };
+	var layout = {title:"<b>QUESTÃO " + question + "</b>"};
 
-    var divQuestion = "Questão " + (question + 1);
-    var data = [{
+	var data = [{
         x:xArray, 
         y:yArray, 
         marker:{
             color:  markerColor,
             opacity: 1,
         },
-        type:"bar",
+        type:"bar"
     }];
-    
-    Plotly.newPlot(div.children[1], data, layout);
+
+
+    const div = document.createElement('div');
+    graphDiv.appendChild(div);
+
+	Plotly.newPlot(div, data, layout); 
 }
 
-drawGraphs(questaoNum - 1);
+
+for (let i = 0; i < allQuestions.length; i++) {
+    createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2]);
+}
