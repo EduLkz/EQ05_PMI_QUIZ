@@ -62,15 +62,18 @@ function confirmarQuestao(){
     if(alternativaSelecionada){
         if(alternativaSelecionada === gabarito[questaoNum - 1]){
             errada.remove();
+            vazia.remove();
         }else{
             correta.remove();
+            vazia.remove();
             const resp = document.getElementById(alternativaSelecionada).textContent;
             respostaSua.textContent = resp;
         }
-        modal.show();
     }else{
-        alert("Selecione um alternativa");
+        correta.remove();
+        errada.remove();
     }
+    modal.show();
 }
 
 for (let i = 0; i < navNum.children.length; i++) {
