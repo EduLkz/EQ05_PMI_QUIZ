@@ -179,7 +179,7 @@
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-correta-texto"></p></span>
                 <div class="acoes">
-                    <button class="butao-base" >Estatisticas</button>
+                    <button class="butao-base" >Estatísticas</button>
                     <button class="butao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
             </div>
@@ -191,9 +191,16 @@
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-errada-texto"></p></span>
                 <div class="acoes">
-                    <button class="butao-base" >Estatisticas</button>
-                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                    <button class="botao-base" onclick="ToggleStats()">Estatísticas</button>
+                    <button class="botao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
+            </div>
+
+            <div id="stats">
+                <h2>Estatísticas</h2>
+                <div class="graph">
+                </div>
+                <button class="botao-base" onclick="ToggleStats()">Fechar</button>
             </div>
         </div>
     </dialog>
@@ -213,5 +220,7 @@
         </div>
     </footer>
 </body>
-<script src="../app.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="../app.js"></script>
+<script type="text/javascript" src="../estatisticas.js"></script>
 </html>

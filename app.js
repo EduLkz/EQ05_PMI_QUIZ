@@ -1,24 +1,68 @@
 const gabarito = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+
 const navNum = document.getElementById("nav-numeros");
 const navNext = document.getElementById("next");
 const navPrev = document.getElementById("prev");
-const questaoNum = parseInt(document.getElementById("questao-num").textContent);
+
+const numId = document.getElementById("questao-num");
+const questaoNum = parseInt(numId.textContent);
+
 const respostaCorreta = document.getElementById("resposta-correta-texto");
 const respostaErrada = document.getElementById("resposta-errada-texto");
 const respostaSua = document.getElementById("resposta-sua-texto");
 
+
 const correta = document.getElementById("correta");
 const errada = document.getElementById("errada");
+const stats = document.getElementById("stats");
 
 const modal = document.querySelector("dialog");
 const respostaCerta = document.getElementById(gabarito[questaoNum-1]).textContent;
 
-respostaCorreta.textContent = respostaCerta;
-respostaErrada.textContent = respostaCerta;
-
 const alternativas = document.getElementById("respostas").children;
 var alternativaSelecionada;
 var respostaEscolhida;
+
+numId.textContent = questaoNum + "/35";
+respostaCorreta.textContent = respostaCerta;
+respostaErrada.textContent = respostaCerta;
+
+
+function SetDialog(dialogN){ 
+    switch(dialogN){
+        case 0:
+            stats.style.display = 'none';
+            errada.style.display = 'flex';
+            correta.style.display = 'none';
+            break;
+        case 1:
+            stats.style.display = 'none';
+            errada.style.display = 'none';
+            correta.style.display = 'flex';
+            break;
+        case 2:
+            stats.style.display = 'flex';
+            errada.style.display = 'none';
+            correta.style.display = 'none';
+            break;
+        default:
+            stats.style.display = 'none';
+            errada.style.display = 'none';
+            correta.style.display = 'none';
+            break;
+        }
+}
+
+function ToggleStats(){
+    if(stats.style.display === 'none'){
+        console.log('On')
+        SetDialog(2);
+        modal.show();
+    }else{
+        SetDialog();
+        modal.close();
+    }
+}
 
 function redirectToQuestion(num){
     window.location.href = "/questões/questao-" + num + ".html";
@@ -61,9 +105,10 @@ function updateAlternativas(){
 function confirmarQuestao(){
     if(alternativaSelecionada){
         if(alternativaSelecionada === gabarito[questaoNum - 1]){
-            errada.remove();
+            SetDialog(1);
         }else{
-            correta.remove();
+            SetDialog(0);
+            
             const resp = document.getElementById(alternativaSelecionada).textContent;
             respostaSua.textContent = resp;
         }
