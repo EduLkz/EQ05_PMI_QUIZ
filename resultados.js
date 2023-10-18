@@ -2,9 +2,9 @@ const allQuestions = [
     [1, 'e', [0.03, 0.18, 0.48, 0.09, 0.22]],
     [2, 'c', [0.64, 0.08, 0.15, 0.02, 0.11]],
     [3, 'b', [0.55, 0.11, 0.03, 0.05, 0.26]],
-    [4, 'b', [0.47, 0.0, 0.03, 0.04, 0.46]],
+    [4, 'b', [0.40, 0.07, 0.03, 0.04, 0.46]],
     [5, 'a', [0.47, 0.27, 0.06, 0.05, 0.15]],
-    [6, 'a', [0.56, 0.19, 0.14, 0.0, 0.11]],
+    [6, 'a', [0.50, 0.19, 0.14, 0.06, 0.11]],
     [7, 'c', [0.13, 0.29, 0.04, 0.05, 0.49]],
     [8, 'd', [0.53, 0.05, 0.23, 0.09, 0.1]],
     [9, 'd', [0.39, 0.38, 0.02, 0.11, 0.1]],
@@ -36,8 +36,21 @@ const allQuestions = [
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
 const graphDiv = document.getElementById('graficos');
+const navGraph = document.getElementById("selecao-graph");
+var showingGraph = 0;
 
-function createGraphs(question, answer, valuesAnswers){
+certas = localStorage.getItem("certas");
+respostas = JSON.parse(localStorage.getItem("perguntasRespondidas"));
+
+const acertos = document.getElementById("acerto");
+const erros = document.getElementById("erro");
+
+acertos.textContent = certas;
+erros.textContent = (35-certas);
+
+console.log(respostas);
+
+function createGraphs(question, answer, valuesAnswers, myAnswer){
     var xArray = ["A", "B", "C", "D", "E"];
 	var yArray = valuesAnswers;
 
@@ -46,24 +59,48 @@ function createGraphs(question, answer, valuesAnswers){
     for (let index = 0; index < 5; index++) {
         markerColor.push('rgb(204, 124, 124)');
     }
+    var acertoCor = 'rgb(124, 204, 124)';
+    var meuCor = 'rgb(48, 132, 163)';
 
     switch (answer) {
         case 'a':
         default:
-            markerColor[0] = 'rgb(124, 204, 124)';
+            markerColor[0] = acertoCor;
             break;
         case 'b':
-            markerColor[1] = 'rgb(124, 204, 124)';
+            markerColor[1] = acertoCor;
             break;
         case 'c':
-            markerColor[2] = 'rgb(124, 204, 124)';
+            markerColor[2] = acertoCor;
             break;
         case 'd':
-            markerColor[3] = 'rgb(124, 204, 124)';
+            markerColor[3] = acertoCor;
             break;
         case 'e':
-            markerColor[4] = 'rgb(124, 204, 124)';
+            markerColor[4] = acertoCor;
             break;
+    }
+
+    if(myAnswer !== undefined){
+        console.log(answer + " | " + myAnswer);
+        switch (myAnswer) {
+            case 'a':
+            default:
+                markerColor[0] = meuCor;
+                break;
+            case 'b':
+                markerColor[1] = meuCor;
+                break;
+            case 'c':
+                markerColor[2] = meuCor;
+                break;
+            case 'd':
+                markerColor[3] = meuCor;
+                break;
+            case 'e':
+                markerColor[4] = meuCor;
+                break;
+        }
     }
 
 	var layout = {title:"<b>QUESTÃO " + question + "</b>"};
@@ -80,12 +117,40 @@ function createGraphs(question, answer, valuesAnswers){
 
 
     const div = document.createElement('div');
+    div.style.display = 'none';
     graphDiv.appendChild(div);
 
 	Plotly.newPlot(div, data, layout); 
 }
 
-
 for (let i = 0; i < allQuestions.length; i++) {
-    createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2]);
+    createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);
+}
+
+ShowGraph(0);
+
+function ShowGraph(num){
+    showingGraph = num;
+
+    for (let i = 0; i < graphDiv.children.length; i++) {
+        if(showingGraph === i){
+            graphDiv.children[showingGraph].style.display = "inline";
+        }else{
+            graphDiv.children[i].style.display = "none";
+        }
+    }
+}
+
+for (let i = 0; i < navGraph.children.length; i++) {
+    //var num = navGraph.children[i].textContent;
+    navGraph.children[i].setAttribute("onClick", "ShowGraph(" + (i) + ")");
+}
+
+function recomecar(){
+    window.location.href = "/instrucoes.html";
+}
+
+function gabarito(){
+    const url = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_licenciatura_letras_portugues_e_ingles.pdf";
+    window.open(url, "_blank").focus();
 }

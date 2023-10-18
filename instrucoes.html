@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Código útilizado para acrescentar fonte do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
+    <script>
+        function ResetValues(){
+            localStorage.setItem("certas", 0);
+            localStorage.setItem("perguntasRespondidas", JSON.stringify([]));
+        }
+    </script>
 </head>
 <body>
     <header> 
@@ -76,7 +82,7 @@
                     </li>                    
                 </ol>
                 <!--Botão para iniciar a prova-->
-                <a href="/questões/questao-1.html"><button>INICIAR PROVA</button></a>
+                <a href="/questões/questao-1.html"><button onclick="ResetValues()">INICIAR PROVA</button></a>
             </div>
             <img src="imagens/astronautas/astro-instrucoes.png" alt="">
         </div>

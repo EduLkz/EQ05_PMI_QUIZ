@@ -1,4 +1,5 @@
 const gabarito = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+var questionsAswered = [];
 
 const navNum = document.getElementById("nav-numeros");
 const navNext = document.getElementById("next");
@@ -11,10 +12,11 @@ const respostaCorreta = document.getElementById("resposta-correta-texto");
 const respostaErrada = document.getElementById("resposta-errada-texto");
 const respostaSua = document.getElementById("resposta-sua-texto");
 
-
 const correta = document.getElementById("correta");
 const errada = document.getElementById("errada");
 const stats = document.getElementById("stats");
+const vazia = document.getElementById("vazia");
+vazia.style.display = 'none';
 
 const modal = document.querySelector("dialog");
 const respostaCerta = document.getElementById(gabarito[questaoNum-1]).textContent;
@@ -26,6 +28,35 @@ var respostaEscolhida;
 numId.textContent = questaoNum + "/35";
 respostaCorreta.textContent = respostaCerta;
 respostaErrada.textContent = respostaCerta;
+SetDialog();
+
+var certas = 0;
+
+function getLocal(){
+    
+    if(localStorage.getItem("certas") === null){
+        localStorage.setItem("certas", certas);
+    }else{
+        certas = localStorage.getItem("certas");
+    }
+
+    if(localStorage.getItem("perguntasRespondidas") === null){
+        localStorage.setItem("perguntasRespondidas", JSON.stringify(questionsAswered));
+    }else{
+        if(localStorage.getItem("perguntasRespondidas").length !== 0)
+            questionsAswered = JSON.parse(localStorage.getItem("perguntasRespondidas"));
+    }
+
+}
+getLocal()
+
+if(questionsAswered[questaoNum - 2] !== undefined){
+    navPrev.setAttribute("disabled", "");
+}
+
+if(questionsAswered[questaoNum ] !== undefined){
+    navNext.setAttribute("disabled", "");
+}
 
 
 function SetDialog(dialogN){ 
@@ -53,15 +84,26 @@ function SetDialog(dialogN){
         }
 }
 
-function ToggleStats(){
-    if(stats.style.display === 'none'){
-        console.log('On')
-        SetDialog(2);
+var respondida = -1;
+
+function ToggleStats(open){
+    if(open === 1){
         modal.show();
+        SetDialog(2);
     }else{
-        SetDialog();
-        modal.close();
+        
+        if(respondida < 0){
+            SetDialog();
+            modal.close()
+        }else{
+            SetDialog(respondida);
+        }
     }
+}
+
+function CloseEmpty(){
+    vazia.style.display = 'none';
+    modal.close();
 }
 
 function redirectToQuestion(num){
@@ -108,23 +150,46 @@ function updateAlternativas(){
 
 function confirmarQuestao(){
     if(alternativaSelecionada){
+        vazia.style.display = 'none';
+        questionsAswered[questaoNum - 1] = alternativaSelecionada;
         if(alternativaSelecionada === gabarito[questaoNum - 1]){
             SetDialog(1);
+            respondida = 1;
+            certas++;
+            localStorage.setItem("certas", certas);
         }else{
             SetDialog(0);
-            
+            respondida = 0;
             const resp = document.getElementById(alternativaSelecionada).textContent;
             respostaSua.textContent = resp;
         }
+        localStorage.setItem("perguntasRespondidas", JSON.stringify(questionsAswered));
+        
         modal.show();
     }else{
-        alert("Selecione um alternativa");
+        vazia.style.display = 'flex';
+        modal.show();
     }
 }
 
 for (let i = 0; i < navNum.children.length; i++) {
     var num = navNum.children[i].textContent;
-    navNum.children[i].setAttribute("onClick", "redirectToQuestion(" + num + ")");
+    var qa = null;
+
+    if(questionsAswered[i] !== undefined){
+        qa = (questionsAswered[i] === gabarito[i]);
+    }
+    switch (qa) {
+        case true:
+            navNum.children[i].style.background = 'rgb(124, 204, 124)';
+            break;
+        case false:
+            navNum.children[i].style.background = 'rgb(204, 124, 124)';
+            break;
+        default:
+            navNum.children[i].setAttribute("onClick", "redirectToQuestion(" + num + ")");
+            break;
+    }
 }
 
 for (let i = 0; i < alternativas.length; i++) {

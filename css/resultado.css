@@ -22,7 +22,7 @@ section .container{
 }
 
 .graficos{
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 
@@ -47,4 +47,52 @@ img{
 
 td{
     padding: 5px 20px;
+}
+
+.acoes button{
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    margin: 15px 10px;
+}
+
+.acoes button:hover,
+.acoes button:focus{
+    background-color: #8EBDF3;
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+}
+
+.acoes button:active{
+    background-color: #df7631;
+    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
+}
+
+#selecao-graph{
+    width: 80%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#selecao-graph button{
+    width: 42px;
+    height: 45px;
+
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 2px 5px;
+}
+
+#selecao-graph button:hover,
+#selecao-graph button:focus{
+    background-color: #8EBDF3;
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+}
+
+#selecao-graph button:active{
+    background-color: #df7631;
+    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
 }

@@ -117,7 +117,7 @@
                 </div>
                 <div class="acoes">
                     <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
-                    <button id="estatistica" class="botao-base">Estatistica</button>
+                    
                     <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-correta-texto"></p></span>
                 <div class="acoes">
-                    <button class="butao-base" >Estatísticas</button>
+                    <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
                     <button class="butao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-errada-texto"></p></span>
                 <div class="acoes">
-                    <button class="botao-base" onclick="ToggleStats()">Estatísticas</button>
+                    <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
                     <button class="botao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                 <h1> Escolha uma alternativa.</h1>
                 <img src="../imagens/astronautas/astro-mensagem-erro.png">
                 <div class="acoes">
-                    <button class="butao-base"> Fechar</button>
+                    <button class="botao-base" onclick="CloseEmpty()"> Fechar</button>
                 </div>
             </div>
 
