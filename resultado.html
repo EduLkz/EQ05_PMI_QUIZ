@@ -7,6 +7,7 @@
     <title>Resultado</title>
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/resultado.css">
+    <!--Código útilizado para acrescentar fonte do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap" rel="stylesheet">
@@ -14,12 +15,15 @@
 <body> 
     <header> 
         <div class="container">
+            <!-- Cabeçalho da página -->
             <div class="logoheader">
+                <!--Div para os logos ENADE e INEP e seus respectivos links-->
                 <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
                 <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="imagens/header/Logo-INEP.png" alt=""></a>
             </div>
             <nav>
                 <ul>
+                    <!--Barra de navegação no header-->
                     <li>
                         <a href="index.html" title="Vá para o Início">Início</a>
                     </li>
@@ -39,9 +43,11 @@
     <section>
         <div class="container">
             <div class="resultados">
+                <!--Seção com os resultados da prova-->
                 <h1>Você finalizou seu QUIZ!</h1>
                 <img src="/imagens/astronautas/astro-sobre2.png" alt="astronalta">
                 <div class="valores">
+                    <!--Valores de acertos e erros-->
                     <table>
                         <tr>
                             <td>Você acertou: </td>
@@ -56,6 +62,7 @@
                 </div>
             </div>
             <div id="selecao-graph">
+                <!--Lista de navegação entre as estatisticas das questões-->
                 <button class="botao-base">1</button>
                     <button class="botao-base">2</button>
                     <button class="botao-base">3</button>
@@ -94,14 +101,17 @@
             </div>
             <div id="graficos"></div>
             <div class="acoes">
+                <!--Botões para reiniciar a prova e visualizar o gabarito-->
                 <button onclick="recomecar()" class="botao-base">Recomeçar</button>
                 <button onclick="gabarito()" class="botao-base">Gabarito</button>
             </div>
         </div>
     </section>
     <footer>
+        <!--Rodapé da página-->
         <div class="container">
             <ul>
+                <!--Lista com os logos da FATEC, ADS e CPS, e links para respectivos sites-->
                 <li>
                     <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
                 </li>
@@ -115,6 +125,7 @@
         </div>
     </footer>
 </body>
+<!--Extensões JS-->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="/resultados.js"></script>
 </html>
