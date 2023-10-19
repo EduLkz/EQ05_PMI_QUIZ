@@ -32,6 +32,8 @@ SetDialog();
 
 var certas = 0;
 
+
+
 function getLocal(){
     
     if(localStorage.getItem("certas") === null){
@@ -48,13 +50,20 @@ function getLocal(){
     }
 
 }
-getLocal()
+getLocal();
 
-if(questionsAswered[questaoNum - 2] !== undefined){
+const nextQuestionValue = checkNextQuestion();
+const prevQuestionValue = checkPrevQuestion();
+
+if(questionsAswered[questaoNum - 1] !== undefined && questionsAswered[questionsAswered - 1] !== null){
+    nextQuestion();
+}
+
+if(questionsAswered[questaoNum - 2] !== undefined && questionsAswered[questaoNum - 2] !== null){
     navPrev.setAttribute("disabled", "");
 }
 
-if(questionsAswered[questaoNum ] !== undefined){
+if(questionsAswered[questaoNum] !== undefined && questionsAswered[questaoNum] !== null){
     navNext.setAttribute("disabled", "");
 }
 
@@ -111,11 +120,17 @@ function redirectToQuestion(num){
 }
 
 function nextQuestion(){
-    window.location.href = "/questões/questao-" + (questaoNum + 1) + ".html";
+    if(nextQuestionValue + 1 < 35){
+        window.location.href = "/questões/questao-" + (nextQuestionValue + 1) + ".html";
+    }else{
+        finalizar();
+    }
 }
 
 function prevQuestion(){
-    window.location.href = "/questões/questao-" + (questaoNum - 1) + ".html";
+    if(prevQuestionValue + 1 < 35){
+        window.location.href = "/questões/questao-" + (prevQuestionValue + 1) + ".html";
+    }
 }
 
 function finalizar(){
@@ -172,11 +187,41 @@ function confirmarQuestao(){
     }
 }
 
+function checkNextQuestion(){
+    var nextQ = undefined;
+    var i = 0;
+    while(nextQ === undefined && i <= (35 - questaoNum)){
+        if(questionsAswered[questaoNum + i] === undefined || questionsAswered[questaoNum + i] === null){
+            nextQ = questaoNum + i;
+            break;
+        }
+
+        i++;
+    }
+
+    return nextQ;
+}
+
+function checkPrevQuestion(){
+    var prevQ = undefined;
+    var i = questaoNum - 1;
+    while(prevQ === undefined && i >= 1){
+        if(questionsAswered[i - 1] === undefined || questionsAswered[i - 1] === null){
+            prevQ = i - 1;
+            break;
+        }
+
+        i--;
+    }
+
+    return prevQ;
+}
+
 for (let i = 0; i < navNum.children.length; i++) {
     var num = navNum.children[i].textContent;
     var qa = null;
 
-    if(questionsAswered[i] !== undefined){
+    if(questionsAswered[i] !== undefined && questionsAswered[i] !== null){
         qa = (questionsAswered[i] === gabarito[i]);
     }
     switch (qa) {

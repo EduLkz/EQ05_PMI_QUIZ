@@ -81,8 +81,7 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){
             break;
     }
 
-    if(myAnswer !== undefined){
-        console.log(answer + " | " + myAnswer);
+    if(myAnswer !== undefined && myAnswer !== null){
         switch (myAnswer) {
             case 'a':
             default:
