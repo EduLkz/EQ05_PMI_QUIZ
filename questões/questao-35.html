@@ -148,7 +148,7 @@
                 <span><p id="resposta-correta-texto"></p></span>
                 <div class="acoes">
                     <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
-                    <button class="butao-base" onclick="nextQuestion()">Proxima</button>
+                    <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
                 </div>
             </div>
             <div id="errada">
@@ -160,7 +160,7 @@
                 <span><p id="resposta-errada-texto"></p></span>
                 <div class="acoes">
                     <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
-                    <button class="botao-base" onclick="nextQuestion()">Proxima</button>
+                    <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
                 </div>
             </div>
             <div id="vazia">
@@ -175,6 +175,7 @@
                 <h2>Estatísticas</h2>
                 <div class="graph">
                 </div>
+                <p>Fonte: Os autores.</p>
                 <button class="botao-base" onclick="ToggleStats()">Fechar</button>
             </div>
         </div>
