@@ -75,15 +75,23 @@ td{
     flex-wrap: wrap;
 }
 
+#selecao-graph li{
+    list-style: none;
+    padding-top: 20px;
+}
+
 
 #selecao-graph button{
     width: 42px;
     height: 45px;
-
     border: none;
     cursor: pointer;
     padding: 5px 15px;
     margin: 2px 5px;
+}
+
+#graficos{
+    padding-top: 50px;
 }
 
 #selecao-graph button:hover,

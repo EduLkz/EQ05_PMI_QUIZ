@@ -282,6 +282,12 @@ dialog #stats button{
     padding: 10px 30px;
 }
 
+dialog #stats p{
+    font-size: 25px;
+    justify-self: center;
+    position: ;
+}
+
 dialog img{
     height: 250px;
 }
