@@ -126,7 +126,7 @@ Prefácio e notas de Maria de Lurdes Saraiva. 3 vols., 1980-1981.</p>
             </div>
             <div class="acoes">
                 <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
-                <button id="estatistica" class="botao-base">Estatistica</button>
+                
                 <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
             </div>
 
@@ -213,6 +213,15 @@ Prefácio e notas de Maria de Lurdes Saraiva. 3 vols., 1980-1981.</p>
                 </div>
                 <p>Fonte: Os autores.</p>
                 <button class="botao-base" onclick="ToggleStats()">Fechar</button>
+            </div>
+            <div id="confirmFinish">
+                <h2>Existem questões não respondidas!</h2> <br>
+                <img src="../imagens/astronautas/astro-mensagem-erro.png" alt="">
+                <h3>Elas serão <strong>contabilizadas como erro.</strong> Deseja mesmo FINALIZAR?</h3><br>
+                <div class="acoes">
+                    <button class="botao-base" onclick="CloseEmpty()"> Continuar Prova</button>
+                    <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
+                </div>
             </div>
         </div>
     </dialog>

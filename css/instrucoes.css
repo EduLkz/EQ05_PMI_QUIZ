@@ -1,64 +1,76 @@
-*{
+/* Resetando as margens e preenchimentos padrão para todos os elementos */
+* {
     margin: 0;
     padding: 0;
-} 
-
-.container{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
 }
 
-section .container{
-    margin: 60px 0 40px 0;
-    display: inline-flex;
-    justify-content: center;
+/* Estilizando o tamanho dos container para ajustar à pagina */
+.container {
+    max-width: 1280px; /* Largura máxima do contêiner */
+    width: 100%; /* Largura total */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente na página */
 }
 
-.instrucaoProva{
-    width: 600px;
-    display: inline;
-    margin: auto 20px;
-    align-items: center;
+/* Estilizando o container dentro da section */
+section .container {
+    margin: 60px 0 40px 0; /* Margem superior, inferior, esquerda e direita */
+    display: inline-flex; /* Usa o modelo de layout flexível com itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner */
 }
 
-section h1{
-    font-family: 'Aref Ruqaa Ink', serif;
-    color: rgb(48, 132, 163);
-    text-align: center;
-    margin-bottom: 40px;
+/* Estilizando a classe que contém as instruções para a prova */
+.instrucaoProva {
+    width: 600px; /* Largura do contêiner de instruções */
+    display: inline; /* Exibe o elemento na mesma linha */
+    margin: auto 20px; /* Margem superior e inferior automática, margem esquerda e direita fixa */
+    align-items: center; /* Alinha os itens verticalmente no centro */
 }
 
-section ol li{
-    text-align: justify;
-    margin-bottom: 5px;
-    font-size: 120%;
+/* Estilizando título principal dentro da section */
+section h1 {
+    font-family: 'Aref Ruqaa Ink', serif; /* Define a fonte que escolhemos */
+    color: rgb(48, 132, 163); /* Cor do texto */
+    text-align: center; /* Alinhamento central do texto */
+    margin-bottom: 40px; /* Margem inferior para dar espaçamento entre o h1 e o texto*/
 }
 
-section img{
-    height: 450px;
+/* Estilizando itens da lista de instruções */
+section ol li {
+    text-align: justify; /* Justifica o texto */
+    margin-bottom: 5px; /* Margem inferior */
+    font-size: 120%; /* Ajusta o tamanho da fonte */
 }
 
-.instrucaoProva a button{
-    background-color: rgb(48, 132, 163);
-    border: solid rgb(48, 132, 163);
-    padding: 15px;
-    border-radius: 10%;
-    color: white;
-    font-family: 'Aref Ruqaa Ink', serif;
-    font-size: 20px;
-    margin-top: 20px;
+/* Ajustando o tamanho das imagens */
+section img {
+    height: 450px; /* Define a altura das imagens */
 }
 
-.instrucaoProva a{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
+/* Estilizando o botão de "INICIAR PROVA" */
+.instrucaoProva a button {
+    background-color: rgb(48, 132, 163); /* Cor de fundo do botão */
+    border: solid rgb(48, 132, 163); /* Estilo e cor da borda do botão */
+    padding: 15px; /* Preenchimento interno do botão */
+    border-radius: 10%; /* Borda arredondada do botão */
+    color: white; /* Cor do texto */
+    font-family: 'Aref Ruqaa Ink', serif; /* Fonte do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    margin-top: 20px; /* Margem superior */
 }
 
-section a button:hover{
-    background-color:rgba(48, 132, 163, 0.459);
-    color: rgb(48, 132, 163);
-    font-weight: bolder;
-    border: rgba(48, 132, 163, 0.459);
+/* Estilizando link dentro do botão que encaminha para primeira questão */
+.instrucaoProva a {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-decoration: none; /* Remove a decoração de link */
+}
+
+/* Estilizando o efeito hover no botão. O efeito hover é uma interação em 
+que um elemento muda de aparência quando o cursor do mouse passa sobre ele.  
+Oferecendo feedback visual ao usuário sobre a interação com o elemento.*/
+section a button:hover {
+    background-color: rgba(48, 132, 163, 0.459); /* Cor de fundo com transparência */
+    color: rgb(48, 132, 163); /* Cor do texto */
+    font-weight: bolder; /* Peso da fonte */
+    border: rgba(48, 132, 163, 0.459); /* Estilo da borda com transparência */
 }
