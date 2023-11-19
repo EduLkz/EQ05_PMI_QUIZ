@@ -7,6 +7,9 @@ const navNum = document.getElementById("nav-numeros");
 const navNext = document.getElementById("next");
 const navPrev = document.getElementById("prev");
 
+const navNextBar = document.getElementById("next-bar");
+const navPrevBar = document.getElementById("prev-bar");
+
 const numId = document.getElementById("questao-num");
 const questaoNum = parseInt(numId.textContent);
 
@@ -36,9 +39,9 @@ SetDialog();
 var certas = 0;
 
 
-
+//Acessa as variaveis salvas no localStorage e atribui para as variavels
+//Caso item não exista, atribui um valor inicial, caso exista, atribui os valores
 function getLocal(){
-    
     if(localStorage.getItem("certas") === null){
         localStorage.setItem("certas", certas);
     }else{
@@ -53,24 +56,36 @@ function getLocal(){
     }
 
 }
+
 getLocal();
 
-const nextQuestionValue = checkNextQuestion();
-const prevQuestionValue = checkPrevQuestion();
+const nextQuestionValue = checkNextQuestion(); //Verifica a proxima questão nao respondida
+const prevQuestionValue = checkPrevQuestion(); //Verifica questões anteriores não respondidas
 
-if(questionsAswered[questaoNum - 1] !== undefined && questionsAswered[questionsAswered - 1] !== null){
-    nextQuestion();
-}
-
-if(questionsAswered[questaoNum - 2] !== undefined && questionsAswered[questaoNum - 2] !== null){
+if(prevQuestionValue === undefined){ //Caso não tenho perguntas anteriores não respondidas, desativa opção de voltar
     navPrev.setAttribute("disabled", "");
+    navPrevBar.setAttribute("disabled", "");
 }
 
-if(questionsAswered[questaoNum] !== undefined && questionsAswered[questaoNum] !== null){
+//Caso não tenho perguntas anteriores não respondidas, desativa opção de avançar
+if(nextQuestionValue === undefined){
     navNext.setAttribute("disabled", "");
+    navNextBar.setAttribute("disabled", "");
 }
 
+//Impede que o usuario acesse uma pergunta já respondida
+if(!(questionsAswered[questaoNum - 1] === undefined || questionsAswered[questaoNum - 1] === null)){
+    console.log(questionsAswered[questaoNum - 1]);
+    if(nextQuestionValue !== undefined){
+        nextQuestion();
+    }else if(prevQuestionValue != undefined){
+        prevQuestion();
+    }else{
+        finalizar();
+    }
+}
 
+//Ativa o pop-up especifico de acordo com o valor indicado
 function SetDialog(dialogN){ 
     switch(dialogN){
         //Alternativa Errada
@@ -112,7 +127,7 @@ function SetDialog(dialogN){
             correta.style.display = 'none';
             confirmF.style.display = 'none';
             vazia.style.display = 'flex';
-        default:
+        default: //Desativa todos
             stats.style.display = 'none';
             errada.style.display = 'none';
             correta.style.display = 'none';
@@ -124,6 +139,7 @@ function SetDialog(dialogN){
 
 var respondida = -1;
 
+//Controla a ativação do pop-up
 function ToggleStats(open){
     if(open === 1){
         modal.show();
@@ -139,11 +155,13 @@ function ToggleStats(open){
     }
 }
 
+//Fecha pop-up de pergunta vazia
 function CloseEmpty(){
     vazia.style.display = 'none';
     modal.close();
 }
 
+//Redireciona para questao com numero equivalente
 function redirectToQuestion(num){
     window.location.href = "/questões/questao-" + num + ".html";
 }
@@ -160,6 +178,7 @@ function nextQuestion(){
     }
 }
 
+//Vai para questão anterior que nao foi respondida
 function prevQuestion(){
     if(prevQuestionValue + 1 < 35){
         window.location.href = "/questões/questao-" + (prevQuestionValue + 1) + ".html";
@@ -167,6 +186,7 @@ function prevQuestion(){
 }
 
 
+//Controla quais alternativa selecionada
 function setAlternativaSelecionada(alt){
     if(!alt) return;
 
@@ -184,6 +204,7 @@ function setAlternativaSelecionada(alt){
     updateAlternativas();
 }
 
+//Tira seleção da alternativa que havia sido selecionada anteriormente
 function updateAlternativas(){
     for (let i = 0; i < alternativas.length; i++) {
         if(alternativas[i].id !== alternativaSelecionada){
@@ -230,9 +251,11 @@ function confirmarQuestao(){
     }
 }
 
+//Verifica a proxima questão não respondida. Caso n tenha questão sem reposta, o valor fica como indefinido
 function checkNextQuestion(){
     var nextQ = undefined;
     var i = 0;
+    
     while(nextQ === undefined && i <= (35 - questaoNum)){
         if(questionsAswered[questaoNum + i] === undefined || questionsAswered[questaoNum + i] === null){
             nextQ = questaoNum + i;
@@ -242,9 +265,12 @@ function checkNextQuestion(){
         i++;
     }
 
+    nextQ = (nextQ === 35) ? undefined : nextQ;
+
     return nextQ;
 }
 
+//Verifica a questão anterior não respondida. Caso n tenha questão sem reposta, o valor fica como indefinido
 function checkPrevQuestion(){
     var prevQ = undefined;
     var i = questaoNum - 1;
@@ -260,6 +286,8 @@ function checkPrevQuestion(){
     return prevQ;
 }
 
+// Passa pelos botores da barra de navegação, muda a cor do botao das perguntas já respondidas,
+// com verde para acerto e vermelho para erros
 for (let i = 0; i < navNum.children.length; i++) {
     var num = navNum.children[i].textContent;
     var qa = null;
@@ -280,6 +308,7 @@ for (let i = 0; i < navNum.children.length; i++) {
     }
 }
 
+//adiciona onclick de cada alternativa
 for (let i = 0; i < alternativas.length; i++) {
     var select = alternativas[i].id;    
     alternativas[i].setAttribute("onClick", "setAlternativaSelecionada(" + select + ")");
