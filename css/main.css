@@ -1,59 +1,63 @@
-*{
+/* Resetando as margens e preenchimentos padrão para todos os elementos */
+* {
     margin: 0;
     padding: 0;
-} 
-
-.container{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
 }
 
-section .container{
-    display: flex;
-    justify-content: space-around;
-    
+/* Estilizando o tamanho dos container para ajustar à pagina */
+.container {
+    max-width: 1280px; /* Largura máxima do container */
+    width: 100%; /* Largura total */
+    margin: 0 auto; /* Centraliza o container horizontalmente na página */
 }
 
-section button{
-    background-color: rgb(48, 132, 163);
-    border: solid rgb(48, 132, 163);
-    padding: 5px;
-    border-radius: 10%;
-    color: white;
-    padding: 15px;
-    font-family: 'Aref Ruqaa Ink', serif;
-    font-size: 20px;
-    margin-top: 25px;
+/* Estilizando o container dentro da section */
+section .container {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-around; /* Distribui o espaço uniformemente entre os elementos filhos */
 }
 
+/* Estilizando botão de "INICIAR PROVA" */
+section button {
+    background-color: rgb(48, 132, 163); /* Cor de fundo do botão */
+    border: solid rgb(48, 132, 163); /* Estilo da borda do botão */
+    padding: 5px; /* Preenchimento interno do botão */
+    border-radius: 10%; /* Borda arredondada do botão */
+    color: white; /* Cor do texto */
+    font-family: 'Aref Ruqaa Ink', serif; /* Fonte do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    margin-top: 25px; /* Margem superior */
+}
+
+/* Estilizando os títulos h1 e h2 */
 section h1,
-section h2{
-    color: rgb(48, 132, 163);
-    font-family: 'Aref Ruqaa Ink', serif;
+section h2 {
+    color: rgb(48, 132, 163); /* Cor do texto */
+    font-family: 'Aref Ruqaa Ink', serif; /* Fonte do texto */
 }
 
-section h1{
-    color: rgb(48, 132, 163);
+/* Estilizando a imagem da página principal */
+section img {
+    height: 450px; /* Define a altura das imagens */
+    margin: 30px 20px; /* Margem externa para ajustar a posição na página */
 }
 
-section img{
-    height: 450px;
-    margin: 30px 20px;
+/* Estilizando o container que possuí os títulos e o botão */
+.containertexto {
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    display: flex; /* Usa o modelo de layout flexível */
+    text-align: center; /* Alinhamento central do texto */
+    height: 450px; /* Altura do contêiner */
 }
 
-.containertexto{
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    height: 450px;
-}
-
-.containertexto a button:hover{
-    background-color:rgba(48, 132, 163, 0.459);
-    color: rgb(48, 132, 163);
-    font-weight: bold;
-    border: rgba(48, 132, 163, 0.459);
+/* Estilizando o efeito hover no botão. O efeito hover é uma interação em 
+que um elemento muda de aparência quando o cursor do mouse passa sobre ele.  
+Oferecendo feedback visual ao usuário sobre a interação com o elemento.*/
+.containertexto a button:hover {
+    background-color: rgba(48, 132, 163, 0.459); /* Cor de fundo com transparência */
+    color: rgb(48, 132, 163); /* Cor do texto */
+    font-weight: bold; /* Peso da fonte */
+    border: rgba(48, 132, 163, 0.459); /* Estilo da borda com transparência */
 }
 

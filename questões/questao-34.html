@@ -109,8 +109,9 @@
                     fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
                 </div>
                 <div class="acoes">
-                    <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
-                    
+                    <button id="finalizar" class="botao-base" onclick="confirmFinish()">Finalizar</button>
+                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
                     <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
                 </div>
             </div>
@@ -198,6 +199,15 @@
                 </div>
                 <p>Fonte: Os autores.</p>
                 <button class="botao-base" onclick="ToggleStats()">Fechar</button>
+            </div>
+            <div id="confirmFinish">
+                <h2>Existem questões não respondidas!</h2> <br>
+                <img src="../imagens/astronautas/astro-mensagem-erro.png" alt="">
+                <h3>Elas serão <strong>contabilizadas como erro.</strong> Deseja mesmo FINALIZAR?</h3><br>
+                <div class="acoes">
+                    <button class="botao-base" onclick="CloseEmpty()"> Continuar Prova</button>
+                    <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
+                </div>
             </div>
         </div>
     </dialog>

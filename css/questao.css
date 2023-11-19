@@ -278,7 +278,26 @@ dialog #vazia, dialog #stats{
     color: #222;
 }
 
-dialog #stats button{
+dialog #confirmFinish{
+    background-color: rgb(241, 158, 102);
+    width: 60vw;
+    min-height: 150px;
+    
+    border-radius: 25px;
+    box-shadow: 0px 20px 35px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    color: #222;
+}
+
+dialog #confirmFinish button{
+    display: inline;
+}
+
+dialog #stats button, dialog #confirmFinish button{
     padding: 10px 30px;
 }
 

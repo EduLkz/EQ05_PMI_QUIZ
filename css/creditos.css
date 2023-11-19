@@ -1,39 +1,46 @@
-*{
+/* Resetando as margens e preenchimentos padrão para todos os elementos */
+* {
     margin: 0;
     padding: 0;
 }
 
-.container{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
+/* Estilizando o container para ajustar tamanho */
+.container {
+    max-width: 1280px; /* Largura máxima do container */
+    width: 100%; /* Largura total */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente na página */
 }
 
-section .container{
-    margin: 60px 0 40px 0;
-    display: inline-flex;
-    justify-content: center;
+/* Estilizando o container dentro da section */
+section .container {
+    margin: 60px 0 40px 0; /* Margem superior, inferior, esquerda e direita */
+    display: inline-flex; /* Usa o modelo de layout flexível com itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner */
 }
 
-h1{
-    text-align: center;
-    margin: 30px 0;
-    font-size: 200%;
-    color: rgb(48, 132, 163);
-    font-family: 'Aref Ruqaa Ink', serif;
+/* Estilizando o título principal */
+h1 {
+    text-align: center; /* Alinhamento central do h1 */
+    margin: 30px 0; /* Margem superior e inferior */
+    font-size: 200%; /* Tamanho da fonte */
+    color: rgb(48, 132, 163); /* Cor do texto */
+    font-family: 'Aref Ruqaa Ink', serif; /* Fonte */
 }
 
-.textocreditos{
-    width: 600px;
-    display: inline;
-    margin: auto 20px;
-    align-items: center;
+/* Estilizando a div com class= "textocreditos" que possuí o texto da página */
+.textocreditos {
+    width: 600px; /* Definindo a largura do contêiner de texto */
+    display: inline; /* Exibe o elemento na mesma linha */
+    margin: auto 20px; /* Margem superior e inferior automática, margem esquerda e direita fixa */
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
-.textocreditos p{
-    text-align: justify;
+/* Estilizando parágrafos dentro do container de créditos */
+.textocreditos p {
+    text-align: justify; /* Justifica o texto */
 }
 
-section img{
-    height: 450px;
+/* Estilizando imagens dentro de seções */
+section img {
+    height: 450px; /* Define a altura das imagens em 450px*/
 }

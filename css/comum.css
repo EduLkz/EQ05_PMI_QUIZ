@@ -1,83 +1,90 @@
-*{
+/*Esse arquivo "comum.css" estiliza elementos em comum em todas as páginas como o cabeçalho e rodapé*/
+
+
+/* Resetando as margens e preenchimentos padrão para todos os elementos */
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+/* Estilizando o corpo da página */
+body {
+    min-height: 100vh; /* Define a altura mínima do corpo como 100% da altura da viewport */
+    height: 100%; /* Define a altura do corpo como 100% */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Organiza os elementos filhos em coluna */
 }
 
-section{
-    margin-top: 90px;
-    flex: 1;
+/* Estilizando a seção principal do conteúdo */
+section {
+    margin-top: 90px; /* Margem superior para evitar sobreposição com o cabeçalho */
+    flex: 1; /* Ocupa o espaço restante na coluna, preenchendo a altura disponível */
 }
 
+/* Estilizando o conteiner do cabeçalho e o rodapé */
 header .container,
-footer .container{
-    max-width: 100vw;
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-    padding: 10px 0;
+footer .container {
+    max-width: 100vw; /* Largura máxima igual à largura da viewport */
+    width: 100%; /* Largura total */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    height: 50px; /* Altura do cabeçalho e rodapé */
+    padding: 10px 0; /* Preenchimento interno superior e inferior */
 }
 
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px auto;
-    position: fixed;
-    top: 0;    
-    background-color: white;
-    z-index: 1;
+/* Estilizando o cabeçalho */
+header .container {
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: space-around; /* Distribui o espaço uniformemente entre os itens */
+    padding: 15px auto; /* Preenchimento interno superior e inferior com espaçamento automático nas laterais */
+    position: fixed; /* Fixa o cabeçalho na parte superior da viewport */
+    top: 0; /* Alinha o cabeçalho no topo */
+    background-color: white; /* Cor de fundo do cabeçalho */
+    z-index: 1; /* Z-index para sobrepor outros elementos */
 }
 
-header{
-    display: inline;
+/* Estilizando a navegação no cabeçalho */
+header nav ul li a {
+    color: rgb(48, 132, 163); /* Cor do texto */
+    text-decoration: none; /* Remove a decoração do link */
+    font-size: 25px; /* Tamanho da fonte */
+    margin-left: 10px; /* Margem esquerda entre os itens */
+    font-family: 'Aref Ruqaa Ink', serif; /* Fonte */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
 }
 
-header .container a img{
-    height: 45px;
+/* Estilizando os itens da navegação no cabeçalho */
+header nav ul li {
+    display: inline-block; /* Exibe os itens da lista na mesma linha */
 }
 
-header nav ul li a{
-    color: rgb(48, 132, 163);
-    text-decoration: none;
-    font-size: 25px;
-    margin-left: 10px;
-    font-family: 'Aref Ruqaa Ink', serif;
-    text-transform: uppercase;
+/* Estilizando o logotipo no cabeçalho */
+#logo-header a img {
+    display: inline; /* Exibe a imagem na mesma linha */
 }
 
-header nav ul li{
-    display: inline-block;
+/* Estilizando o rodapé */
+footer {
+    margin-top: 80px; /* Margem superior para evitar sobreposição com o conteúdo */
+    z-index: 1; /* Z-index para sobrepor outros elementos */
 }
 
-#logo-header a img{
-    display: inline;
+/* Estilizando o conteúdo dentro do rodapé */
+footer .container {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: white; /* Cor de fundo do rodapé */
 }
 
-footer{
-    margin-top: 80px;
-    z-index: 1;
+/* Estilizando a lista de itens no rodapé */
+footer .container ul {
+    display: inline-flex; /* Exibe os itens da lista na mesma linha */
+    list-style-type: none; /* Remove os estilos padrão da lista */
 }
 
-footer .container{
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
-
-footer .container ul{
-    display: inline-flex;
-    list-style-type: none;
-}
-
-footer .container ul li a img{
-    height: 40px;
-    margin: 8px 6px;
-    display: flex;
+/* Estilizando os itens da lista no rodapé */
+footer .container ul li a img {
+    height: 40px; /* Altura das imagens */
+    margin: 8px 6px; /* Margens das imagens */
+    display: flex; /* Usa o modelo de layout flexível */
 }
