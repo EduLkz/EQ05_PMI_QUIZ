@@ -1,5 +1,42 @@
 //constante com respostas corretas do gabarito oficial do INEP
 const gabarito = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+const resGabarito = [
+    "e) A ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, o que ocasiona conflitos sociais em busca do acesso a tais fatores.",
+    "c) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+    "b) II. \'O uso das bicicletas como meio de transporte contribui para a melhoria da qualidade de vida nas grandes metrópoles, pois elas não emitem poluentes, além de esse uso proporcionar a prática de atividade física\', Apenas",
+    "b) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.",
+    "a) I. \'O elevado índice de suicídios entre crianças e adolescentes indígenas no país evidencia a necessidade de ações com foco nos direitos fundamentais desses indivíduos.\'.",
+    "a) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.",
+    "c) I. \'Os textos I e II evidenciam a importância de critérios nas buscas realizadas pelos usuários da Internet por informações sobre patologias, pois algumas informações podem trazer riscos à saúde por fomentarem a compreensão equivocada de sintomas e profilaxias\' e II. \'O texto I afirma que a disponibilização de informações sobre temas de saúde nos meios de comunicação tem contribuído para o esclarecimento da população acerca de hábitos saudáveis.",
+    "d) I. \'O bem comum, a ser estabelecido por um governo democrático, nem sempre está associado às opiniões da maioria do povo.\', III. \'Circunstâncias políticas de polarização, marcadas pela alta competitividade e combatividade entre posições divergentes, caracterizam um modelo de democracia majoritária\' e IV. \'Democracia consensual pressupõe que a situação política no poder considere em suas decisões as necessidades das minorias, no sentido de governar para todo o povo.\'",
+    "d) discuss language as a social, historical and cultural construct.",
+    "a) Statements I and II are true propositions, and II is a correct justification of I.",
+    "c) À segregação racial e à expectativa de que seria superada com a prosperidade trazida pelos negros na construção do país.",
+    "a) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.",
+    "b) Ensinar o idioma como ferramenta de comunicação entre os povos sem privilegiar povos hegemônicos.",
+    "d) I. \'The digital tool used by the teacher allowed students to respond to literature in personal and meaningful ways\', III. \'Teacher used the digital tool as a resource to supplement and enrich the content traditionally presented in the classroom.\' and IV. Online literary discussion enhances student’s confidence as they can post their comments anonymously.\', only.",
+    "c) Acarretarem uma gramática explícita que se absorve da forma e do significado das expressões da língua.",
+    "c) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+    "e) As asserções I e II são proposições falsas.",
+    "b) Ajudam a caracterizar Zé Pequeno como membro de uma comunidade de fala mais próxima do polo rural do contínuo rural-urbano, mas não são fenômenos restritos a este polo e, portanto, não podem ser considerados estereótipos dos falares rurais",
+    "d) I. \'Camões inova na arte de escrever ao utilizar em seus textos o princípio clássico da imitação, a qual não consiste apenas em transcrever o texto imitado, mas possibilita Camões reinventar o texto.\', III. \'Camões parte do texto bíblico, respeita a essência e o contexto histórico específico, e o transforma em um poema lírico de alta qualidade estética e literária.\' e IV. \'Camões, ao transformar o texto bíblico em um poema lírico amoroso, abranda o comportamento de     Labão, supervalorizando o amor de Jacó por Raquel e transformando o texto narrativo em arte literária\'.",
+    "e) I. \'A determinação do valor de uma obra literária perpassa pelo conceito de originalidade, evidenciada pela riqueza e complexidade tanto do ponto de vista semântico, quanto do ponto de vista formal, aspecto esse que, embora específico à literatura, pode ser aplicado a letras de canções, como é o caso de “Beija eu”.\', II. \'Na canção “Beija eu”, a ruptura poética, linguisticamente estabelecida, ocorre pela utilização do pronome “eu”, o que causa estranhamento não tanto pela construção em si – muito comum na linguagem oral –, mas pela vinculação dessa construção aos sentidos possíveis que ela ganha, estabelecendo-se, desse modo, a literariedade do texto.\' e III. \'A partir do advento da crítica pós-estruturalista, as produções artísticas começam a ser valorizadas mais pelo que constroem em termos de linguagens e sentidos do que pela classificação catalográfica que recebem; perspectiva sob a qual letras de canções populares passam a compor o objeto de estudos da crítica literária, que começa a se debruçar sobre a investigação das manifestações culturais em linguagens diversas e variadas.\'.",
+    "b) O poema “Meus oito anos” de Oswald de Andrade, escritor da primeira fase do Modernismo brasileiro, constitui uma intertextualidade, em forma de paródia, do poema “Meus oito anos”, escrito no século XIX, por Casimiro de Abreu, autor da segunda geração romântica brasileira",
+    "a) I. \'O texto I apresenta um trecho de uma peça teatral do humanismo português, isto é, período de transição entre a cultura da Idade Média e do Renascimento, e menciona três elementos que são importantes para a compreensão da morte como ritual de travessia.\' e III. \'O texto III apresenta trecho de um conto, em prosa coloquial, considerado obra literária do contexto modernista brasileiro, cujo título não revela que terceira margem é esta, mas indica que o pai segue rumo a um caminho desconhecido.\'.",
+    "a) I. \'As obras de Portinari e Graciliano Ramos, representadas nos textos I e II expressam um sentimento de indignação e denúncia da realidade, uma vez que ambas abordam o problema da relação concreta da sociedade do sertão por meio de um choque estético, pela forma rude com que representam a cena e as personagens.\', apenas",
+    "e) III. \'A observação da prática do professor em sala de aula corporifica uma tensão entre confiança e vulnerabilidade, devendo por este motivo ser evitada.\' e IV. \'A avaliação permite ao docente refletir sobre sua prática pedagógica e auxilia no aprimoramento e/ou reformulação do processo de ensino.\'.",
+    "d) Os objetivos e os programas de ensino devem estar alinhados com as novas demandas sociais, com as formas de circulação e produção da informação e às reais necessidades dos alunos.",
+    "b) Na letra da canção, o eu lírico está ressignificando elementos culturais e artísticos, a partir do questionamento do intercâmbio cultural entre as culturas brasileira e americana, pela integração dos elementos exteriores aos próprios de sua tradição.",
+    "e) I. \'O gênero cartum indica um tom crítico, satírico que utiliza o humor para explorar as diferenças de crenças e valores que se refletem em dois dress codes completamente diferentes.\', II. \'A proximidade linguística apresentada nos balões indica a mesma ideologia subjacente às duas culturas: “Nothing/everything covered but her eyes, what a cruel male-dominated culture”.\' e III. \'O processo de interpretação do cartum engloba tanto a linguagem verbal quanto a linguagem não verbal apresentadas, além de um conhecimento enciclopédico de mundo referente às diferenças interculturais inerentes ao discurso apresentado.\'",
+    "c) I. \'O professor pode explicitar que entre 1850 e 1890 o Realismo espalhou-se pela Europa e outros continentes tanto nas artes visuais quanto na literatura.\', II. \'O professor pode relacionar a pintura Arrufos, que retrata a discussão de um casal, e o trecho de O Primo Basílio, a fim de retratar em diferentes expressões artísticas a representação objetiva da realidade, ou seja, uma forma de reproduzir a realidade tal como ela é.\' e III.\'O professor pode relacionar Arrufos, uma das primeiras obras brasileiras a romper com a tradição de pinturas históricas e de imagens sagradas e O Primo Basílio, um romance de crítica da sociedade portuguesa cujas falsas bases Eça de Queirós considerava um dever atacar.\'.",
+    "a) IV. \'O ensino dos gêneros orais nas escolas brasileiras é negligenciado devido a condições e limitações impostas por muitos contextos.\' e V. \'O ensino baseado em gêneros textuais é eficaz por possibilitar que os alunos se engajem em práticas discursivas diversas.\'.",
+    "d) I. \'Os textos permitem a exemplificação de figuras de linguagem, como metáfora e prosopopeia.\', II. \'Os fragmentos podem ser utilizados para a construção de propostas que envolvam o ensino de ortografia e de sintaxe.\' e III. \'Os excertos apresentam a gramática de forma lúdica e permitem a criação de outras histórias sobre classes de palavras, por exemplo.\'.",
+    "d) II. \'A relação entre educação e movimentos sociais na educação quilombola objetiva adequar essa organização cultural ao sistema educacional.\' e III. \'O papel da comunidade quilombola é determinante nos processos decisórios acerca da educação escolar a ser nela implementada.\', apenas.",
+    "a) As asserções I e II são proposições verdadeiras, e a II é uma justificati va correta da I.",
+    "c) I. \'É necessário criar situações em sala de aula que promovam o convívio social entres as crianças, que estimule o respeito às diferenças, promovendo o reconhecimento das suas potencialidades e o desenvolvimento afetivo, cognitivo, linguístico e sociocultural.\', II. \'A Libras deve ser assegurada como a primeira língua da criança surda, considerando-se a Língua Portuguesa, na modalidade escrita, como a segunda.\' e IV. \'A escola deve fomentar parcerias com os pais com o objetivo de acolhê-los e ajudá-los a constituir uma imagem positiva de seu filho surdo, auxiliando-o na compreensão da sua realidade.\'.",
+    "c) III. \'Em suas respostas, Andrea e Cíntia expressam a ideia de liderança a partir de um de seus aspectos, o interpessoal, embora outros fatores relevantes interfiram na gestão escolar, como o administrativo e/ou o pedagógico.\' e IV. \'As afirmações das participantes relacionam a liderança a uma capacidade de convencimento e a uma habilidade inata do líder – concepções já ultrapassadas pelas investigações educacionais sobre o tema no cenário contemporâneo.\'.",
+    "e) II. \'Ciberdemocracia, democracia informacional e ciberativismo podem ser classificados como movimentos advindos da virtualidade.\', IV. \'Tempo e espaço são conceitos a serem repensados a partir da inserção cada vez maior da virtualidade na vida social.\' e V. \'É papel do educador formar e preparar os alunos para uma atuação responsável e crítica frente à virtualidade, explorando suas potencialidades.\'."
+]
 //variável das questões que foram respondidas
 var questionsAswered = [];
 
@@ -25,7 +62,7 @@ const confirmF = document.getElementById("confirmFinish");
 //vazia.style.display = 'none';
 
 const modal = document.querySelector("dialog");
-const respostaCerta = document.getElementById(gabarito[questaoNum-1]).textContent;
+const respostaCerta = resGabarito[questaoNum - 1];
 
 const alternativas = document.getElementById("respostas").children;
 var alternativaSelecionada;
@@ -242,7 +279,7 @@ function confirmarQuestao(){
         localStorage.setItem("perguntasRespondidas", JSON.stringify(questionsAswered));
         
         modal.show();
-    }else if(alternativaSelecionada==null){
+    }else if(alternativaSelecionada === null){
         //Esse else esta ligado ao primeiro if, ou seja, se nada dentro do if for verdadeiro
         //no caso de quando o usuário não respondeu nenhuma alternativa, abre um pop-up
         //que solicita que ele a responda, apenas com um botão de fechar o pop-up
