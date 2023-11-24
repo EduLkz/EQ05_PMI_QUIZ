@@ -1,5 +1,6 @@
 const div = document.getElementById("stats");
 
+//Valores das estatisticas para cada questão
 const allQuestions = [
     [1, 'e', [0.03, 0.18, 0.48, 0.09, 0.22]],
     [2, 'c', [0.64, 0.08, 0.15, 0.02, 0.11]],
@@ -38,10 +39,12 @@ const allQuestions = [
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
 
+//Desenha o graico
 function drawGraphs(question){
     var xArray = ["A", "B", "C", "D", "E"];
     var markerColor = [];
 
+    //Define a cor de cada ma das barras
     for (let index = 0; index < 5; index++) {
         markerColor.push('rgb(204, 124, 124)');
     }
@@ -49,6 +52,7 @@ function drawGraphs(question){
     var answer = allQuestions[question][1];
 	var yArray = allQuestions[question][2];
 
+    //Define a cor da alternativa selecionada
     switch (answer) {
         case 'a':
         default:
@@ -68,13 +72,14 @@ function drawGraphs(question){
             break;
     }
 
+    //Configuração da tabela
     var layout = {
         title:"<b>QUESTÃO " + (question + 1) + "</b>",
         paper_bgcolor: 'rgba(0, 0, 0, 0)',
         plot_bgcolor: '#e1e1e1',
     };
 
-    var divQuestion = "Questão " + (question + 1);
+    //Cria objeto da tabela para criação
     var data = [{
         x:xArray, 
         y:yArray, 
@@ -85,7 +90,8 @@ function drawGraphs(question){
         type:"bar",
     }];
     
-    Plotly.newPlot(div.children[1], data, layout);
+    //Cria a tabela de estatistica
+    Plotly.newPlot(div.children[1], data, layout,  {staticPlot: true});
 }
 
 drawGraphs(questaoNum - 1);

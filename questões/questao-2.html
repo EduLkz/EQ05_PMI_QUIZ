@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 2 </title>
+    <!-- links para extensões css e fonte retirada do Google-->
     <link rel="stylesheet" href="../css/comum.css">
     <link rel="stylesheet" href="../css/questao.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +14,18 @@
 </head>
 <body>
     <header> 
+        <!-- Div do cabeçalho comum em todas as páginas-->
         <div class="container">
+            <!-- Classe com os logos do ENADE e INEP e seus respectivos links-->
             <div class="logoheader">
+                <!--Colocamos uma tag title para quando o cursor do usuário estiver em cima do link aparecer as respectivas frases-->
                 <a href="https://enade.inep.gov.br/" title="Vá para site da ENADE"><img src="../imagens/header/Logo-Enade.jpg" alt="Logo ENADE"></a>
                 <a href="https://www.gov.br/inep/pt-br" title="Vá para site do INEP"><img src="../imagens/header/Logo-INEP.png" alt=""></a>
             </div>
             <nav>
+                <!--NAV com os links para navegar entre as páginas do nosso site-->
                 <ul>
+                    <!--Lista nav linkadas aos respectivos endereços HTML-->
                     <li>
                         <a href="../index.html" title="Vá para o Início">Início</a>
                     </li>
@@ -38,26 +44,33 @@
     </header>
     <section>
         <div class="main">
+            <!--Div Principal com conteúdo das questões-->
             <div class="questao">
                 <div id="questao-num"> 
+                    <!--Número da questão atual-->
                     <p>2</p>
                 </div>
                 <div class="pergunta">
-                    <!-- Caso só tenha mais de dois texto, copiar a div impar ou par de acordo com numero do texto -->
-                    <!-- Se só tiver um texto ou não tiver titulo, pode apagar o h2 -->
-                    <!-- Quando tiver apenas um texto, colocar a class "unico" após impar -->
-                    <!-- class="pergunta-texto impar unico" -->
+                    <!--Classe para a pergunta-->
                     <div class="pergunta-texto impar"> 
+                        <!--Classe para separar os textos caso haja mais do que 1, cada texto em uma div diferente-->
+                        <!-- Titulo do texto 1 se houver-->
                         <h2> TEXTO I </h2>
+                        <!--tag "p" com o contéudo do texto em si, no caso desta questão havia uma imagem
+                        então colocamos uma tag img dentro da tag p-->
                         <p> <img src="../imagens/questoes/02.png" alt=""></p>
                         <div class="fonte">
+                            <!--Div para colocarmos a referência do texto-->
                             <br>
                             <span>Disponível em: htt ps://www.facebook.com/embrapa/photos/a.609357055926350/733391400189581/?type=1&theater.
                                 Acesso em: 27 maio 2020.</span>
                         </div>
                     </div>
-                    <div class="pergunta-texto par"> <!-- Caso só tenha um texto, remover essa div -->
+                    <div class="pergunta-texto par">
+                        <!--Classe para texto 2-->
+                        <!-- Titulo do texto 2-->
                         <h2> TEXTO II </h2>
+                        <!--tag "p" com o contéudo do texto em si-->
                         <p>  Em alguns países da Europa, permite-se que um produto de menor valor estéti co seja comercializado.
                             Estamos falando de um pepino deformado ou de uma cebola pequena, mas não de um produto
                             contaminado com resíduos químicos ou agentes biológicos. No caso do Brasil, o problema vai além da
@@ -77,13 +90,15 @@
                             qualidade da alimentação da população brasileira. <br>
                         </p>
                         <div class="fonte">
+                            <!--Div para colocarmos a referência do texto 2 -->
                             <br>
-                            <span>Disponível em: htt ps://www.embrapa.br/busca-de-noti cias/-/noti cia/29626389/manuseio-correto-preserva-a-qualidade-e
-                                -a-vida-uti l-das-hortalicas. Acesso em: 27 maio 2020 (adaptado).</span>
+                            Disponível em: htt ps://www.embrapa.br/busca-de-noti cias/-/noti cia/29626389/manuseio-correto-preserva-a-qualidade-e
+                                -a-vida-uti l-das-hortalicas. Acesso em: 27 maio 2020 (adaptado).
                         </div>
                     </div>
 
                     <div class="enunciado">
+                        <!--Div com o enúnciado da questão em uma tag "p"-->
                         <p>Considerando as informações apresentadas nos textos, avalie as asserções a seguir e a relação proposta
                             entre elas. <br>
                             I. O texto I sintetiza uma informação principal do texto II, ao apresentar critérios disti nti vos de
@@ -97,7 +112,7 @@
                     </div>
                 </div>
                 <div id="respostas">
-                    <!-- Colocar as alternativas na ordem correta -->
+                    <!-- Div com as alternativas na ordem da prova oficial em formato de button-->
                     <button class="alternativa" id="a">
                         a)  As asserções I e II são proposições verdadeiras, e a II é uma justi fi cati va correta da I.
                     </button>
@@ -115,22 +130,31 @@
                     </button>
                 </div>
                 <div class="fonte">
+                    <!-- Div para a nossa fonte que é o link da prova ENADE-->
                     fonte: https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_licenciatura_letras_portugues_e_ingles.pdf
                 </div>
                 <div class="acoes">
+                    <!-- Lista com botõesa de ações que o usuário pode utilizar -->
+                    <!-- Botão finalizar prova que aciona a function "confirmFinish()"-->
                     <button id="finalizar" class="botao-base" onclick="confirmFinish()">Finalizar</button>
-                    <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
-                    <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
+                    <!--Botão para próxima questão que aciona a function "prevQuestion()"-->
+                    <button id="prev-bar" class="botao-base" onclick="prevQuestion()"><<</button>
+                    <!--Botão para questão anterior que aciona a function "nextQuestion()"-->
+                    <button id="next-bar" class="botao-base" onclick="nextQuestion()">>></button>
+                    <!--Botão para confirmar a questão que aciona a function "confirmarQuestão()"-->
                     <button id="confirmar" class="botao-base" onclick="confirmarQuestao()">Confirmar</button>
                 </div>
             </div>
 
             <div class="nav">
                 <div id="nav-botoes">
+                    <!-- Div com botões para navegar entre as questões-->
+                    <!--Botões em que o usuário pode ir para a próxima questão ou a anterior-->
                     <button id="prev" class="botao-base" onclick="prevQuestion()"><<</button>
                     <button id="next" class="botao-base" onclick="nextQuestion()">>></button>
                 </div>
                 <div id="nav-numeros">
+                    <!--Lista de botões das questões interconectados aos seus endereços HTML-->
                     <button class="botao-base">1</button>
                     <button class="botao-base">2</button>
                     <button class="botao-base">3</button>
@@ -171,58 +195,93 @@
         </div>
     </section>
     <dialog>
+        <!--Seção para formatar os pop-ups-->
         <div class="content">
             <div id="correta">
+                <!--Pop-up para quando a questão está correta-->
+                <!--Title para o Pop-UP-->
                 <h1> Resposta Correta</h1>
+                <!--Imagem ilustrativa astronauta sucesso-->
                 <img src="../imagens/astronautas/astro-questao-certa.png">
+                 <!--texto com a alternativa correta-->
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-correta-texto"></p></span>
                 <div class="acoes">
+                    <!--Ações dentro do pop-up-->
+                    <!--Botão para visualizar a estatística da questão-->
                     <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
+                    <!--Botão para ir para próxima questão-->
                     <button class="butao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
             </div>
             <div id="errada">
+                <!--Pop-up para quando a questão está errada-->
+                <!--Title para o Pop-UP-->
                 <h1> Resposta Errada</h1>
+                <!--Imagem ilustrativa astronauta triste-->
                 <img src="../imagens/astronautas/astro-questao-errada.png">
+                <!--texto com a alternativa errada escolhida pelo usuário-->
                 <p>A resposta sua resposta foi:</p>
                 <span><p id="resposta-sua-texto"></p></span>
+                <!--texto com a alternativa correta-->
                 <p>A resposta correta era:</p>
                 <span><p id="resposta-errada-texto"></p></span>
                 <div class="acoes">
+                    <!--Ações dentro do pop-up-->
+                    <!--Botão para visualizar a estatística da questão-->
                     <button class="botao-base" onclick="ToggleStats(1)">Estatísticas</button>
+                    <!--Botão para ir para próxima questão-->
                     <button class="botao-base" onclick="nextQuestion()">Proxima</button>
                 </div>
             </div>
             <div id="vazia">
+                <!--Pop-up para quando a alternativa não foi selecionada e o usuário confirmou-->
+                <!--Title para o Pop-UP-->
                 <h1> Escolha uma alternativa.</h1>
+                <!--Imagem ilustrativa astronauta-->
                 <img src="../imagens/astronautas/astro-mensagem-erro.png">
                 <div class="acoes">
+                    <!--Ações dentro do pop-up-->
+                    <!--Botão para fechar Pop-Up-->
                     <button class="botao-base" onclick="CloseEmpty()"> Fechar</button>
                 </div>
             </div>
 
             <div id="stats">
+                <!--Pop-up para as estatíscas-->
+                <!--Title para o Pop-UP-->
                 <h2>Estatísticas</h2>
                 <div class="graph">
+                    <!--class para as estatísticas acionadas pelo JS-->
                 </div>
+                <!--Texto com a fonte das estatisticas-->
                 <p>Fonte: Os autores.</p>
+                <!--Botão para fechar Pop-Up-->
                 <button class="botao-base" onclick="ToggleStats()">Fechar</button>
             </div>
             <div id="confirmFinish">
+                <!--Pop-up para confirmar se o usuário quer finalizar a prova que está incompleta-->
+                <!--Title para o Pop-UP-->
                 <h2>Existem questões não respondidas!</h2> <br>
+                <!--Imagem ilustrativa astronauta-->
                 <img src="../imagens/astronautas/astro-mensagem-erro.png" alt="">
-                <h3>Elas serão <strong>contabilizadas como erro.</strong> Deseja mesmo FINALIZAR?</h3><br>
+                <!--Texto explicando ao usuário-->
+                <h3>Elas serão contabilizadas como erro. Deseja mesmo FINALIZAR?</h3><br>
+                <!--Ações dentro do pop-up-->
                 <div class="acoes">
+                    <!--Botão para frechar Pop-Up e continuar prova-->
                     <button class="botao-base" onclick="CloseEmpty()"> Continuar Prova</button>
+                    <!--Botão para confirmar finalização e encaminhar para resultados-->
                     <button id="finalizar" class="botao-base" onclick="finalizar()">Finalizar</button>
                 </div>
             </div>
         </div>
     </dialog>
     <footer>
+        <!--Rodapé da página-->
         <div class="container">
             <ul>
+                <!--Lista com os logos da FATEC, ADS e CPS, e links para respectivos sites-->
                 <li>
                     <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" title="Vá para site do curso de ADS"><img src="../imagens/footer/logoADS.png" alt="Logo do curso de ADS"></a>
                 </li>

@@ -36,6 +36,7 @@ const allQuestions = [
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
 const graphDiv = document.getElementById('graficos');
+const graphTotal = document.getElementById('graph-total');
 const navGraph = document.getElementById("selecao-graph");
 var showingGraph = 0;
 
@@ -46,11 +47,34 @@ const acertos = document.getElementById("acerto");
 const erros = document.getElementById("erro");
 
 acertos.textContent = certas;
+//Como perguntas não respondidas contam como erro, podemos assumir que todas questões
+//que não estão corretas, podem ser consideradas como erros
 erros.textContent = (35-certas);
 
-console.log(respostas);
+function createGraphTotal(){ //Criação de grafico de acertos e erros
+    var xArray = ["Acertos", "Erros"];
+    console.log(35 - certas);
+    var yArray = [parseInt(certas), (35-certas)];
+    var markerColor = ['rgb(124, 204, 124)', 'rgb(204, 124, 124)'];
 
-function createGraphs(question, answer, valuesAnswers, myAnswer){
+    var layout = {title:"<b>Total de acertos e erros</b>"};
+
+	var data = [{
+        x:xArray, 
+        y:yArray, 
+        marker:{
+            color:  markerColor,
+            opacity: 1,
+        },
+        type:"bar"
+    }];
+
+
+	Plotly.newPlot(graphTotal, data, layout, {staticPlot: true}); 
+    
+}
+
+function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de graficos para cada questão
     var xArray = ["A", "B", "C", "D", "E"];
 	var yArray = valuesAnswers;
 
@@ -61,7 +85,8 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){
     }
     var acertoCor = 'rgb(124, 204, 124)';
     var meuCor = 'rgb(48, 132, 163)';
-
+    
+    //Ajusta cor da resposta correta
     switch (answer) {
         case 'a':
         default:
@@ -81,6 +106,7 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){
             break;
     }
 
+    //Ajusta cor da resposta selecionada
     if(myAnswer !== undefined && myAnswer !== null){
         switch (myAnswer) {
             case 'a':
@@ -119,15 +145,17 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){
     div.style.display = 'none';
     graphDiv.appendChild(div);
 
-	Plotly.newPlot(div, data, layout); 
+	Plotly.newPlot(div, data, layout, {staticPlot: true}); 
 }
 
 for (let i = 0; i < allQuestions.length; i++) {
     createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);
 }
 
+createGraphTotal();
 ShowGraph(0);
 
+//Mostra grafico da questão escolhida
 function ShowGraph(num){
     showingGraph = num;
 
