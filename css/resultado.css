@@ -1,103 +1,118 @@
-section .container{
-    display: flex;
-    margin-bottom: 60px;
-    flex-direction: column;
-    align-items: center;
-
-    max-width: 1280px;
-    width: 100%;
-    margin: 0;
+/* Estilos para o container */
+section .container {
+    display: flex; /* Usa o modelo de layout flexível */
+    margin-bottom: 60px; /* Margem inferior */
+    flex-direction: column; /* Organiza os elementos filhos em coluna */
+    align-items: center; /* Alinha os itens centralmente */
+    max-width: 1280px; /* Largura máxima do contêiner */
+    width: 100%; /* Largura total */
+    margin: 0; /* Zera as margens */
 }
 
-.resultados{
-    color: white;
-    background-color: rgb(48, 132, 163);
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-
-    padding: 25px 50px;
-    margin: 10px 0;
+/* Estilos para a seção 'resultados' */
+.resultados {
+    color: white; /* Cor do texto */
+    background-color: rgb(48, 132, 163); /* Cor de fundo */
+    width: 100%; /* Largura total */
+    align-items: center; /* Alinha os itens centralmente */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Organiza os elementos filhos em coluna */
+    padding: 25px 50px; /* Preenchimento interno */
+    margin: 10px 0; /* Margem externa */
 }
 
-.graficos{
-    margin: 25px 0;
+/* Estilos para a classe 'graficos' */
+.graficos {
+    margin: 25px 0; /* Margem superior e inferior */
 }
 
-
-img{
-    max-width: 450px;
+/* Estilos para todas as imagens */
+img {
+    max-width: 450px; /* Largura máxima da imagem */
 }
 
-.valores{
-    color: white;
-    font-size: 2em;
+/* Estilos para a classe 'valores' */
+.valores {
+    color: white; /* Cor do texto */
+    font-size: 2em; /* Tamanho da fonte */
 }
 
-.valores #acerto{
-    color: rgb(54, 235, 54);
-    font-weight: bolder;
+/* Estilos para os IDs 'acerto' e 'erro' dentro da classe 'valores' */
+.valores #acerto {
+    color: rgb(54, 235, 54); /* Cor do texto para acertos */
+    font-weight: bolder; /* Define a espessura da fonte */
 }
 
-.valores #erro{
-    color: rgb(250, 38, 38);
-    font-weight: bolder;
+.valores #erro {
+    color: rgb(250, 38, 38); /* Cor do texto para erros */
+    font-weight: bolder; /* Define a espessura da fonte */
 }
 
-td{
-    padding: 5px 20px;
+/* Estilos para todas as células de tabela */
+td {
+    padding: 5px 20px; /* Preenchimento interno */
 }
 
-.acoes button{
-    border: none;
-    cursor: pointer;
-    padding: 10px 40px;
-    margin: 15px 10px;
+/* Estilos para os botões dentro da classe 'acoes' */
+.acoes button {
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    padding: 10px 40px; /* Preenchimento interno */
+    margin: 15px 10px; /* Margem */
 }
 
+/* Efeito hover e foco nos botões da classe 'acoes' */
 .acoes button:hover,
-.acoes button:focus{
-    background-color: #8EBDF3;
-    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+.acoes button:focus {
+    background-color: #8EBDF3; /* Cor de fundo ao passar o mouse ou focar */
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse ou focar */
 }
 
-.acoes button:active{
-    background-color: #df7631;
-    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
+/* Estilos para a lista não ordenada com ID 'selecao-graph' */
+#selecao-graph {
+    width: 80%; /* Largura */
+    height: 120px; /* Altura */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que os elementos filhos quebrem a linha */
 }
 
-#selecao-graph{
-    width: 80%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Estilos para os itens da lista dentro de 'selecao-graph' */
+#selecao-graph li {
+    list-style: none; /* Remove os marcadores de lista */
+    padding-top: 20px; /* Preenchimento superior */
 }
 
-#selecao-graph li{
-    list-style: none;
-    padding-top: 20px;
+/* Estilos para os botões dentro de 'selecao-graph' */
+#selecao-graph button {
+    width: 42px; /* Largura */
+    height: 45px; /* Altura */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    padding: 5px 15px; /* Preenchimento interno */
+    margin: 2px 5px; /* Margem */
 }
 
-
-#selecao-graph button{
-    width: 42px;
-    height: 45px;
-    border: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    margin: 2px 5px;
+/* Estilos para a seção 'graficos' */
+#graficos {
+    padding-top: 50px; /* Preenchimento superior */
 }
 
-#graficos{
-    padding-top: 50px;
-}
-
+/* Efeito hover e foco nos botões dentro de 'selecao-graph' */
 #selecao-graph button:hover,
-#selecao-graph button:focus{
-    background-color: #8EBDF3;
-    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+#selecao-graph button:focus {
+    background-color: #8EBDF3; /* Cor de fundo ao passar o mouse ou focar */
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse ou focar */
+}
+
+/* Estilos para os cabeçalhos de nível 2 */
+h2 {
+    margin: 20px; /* Margem externa */
+}
+
+/* Estilos para a classe 'fonteAutores' */
+.fonteAutores {
+    margin-bottom: 30px; /* Margem inferior */
 }
 
 #selecao-graph button:active{
@@ -105,6 +120,3 @@ td{
     box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
 }
 
-h2{
-    margin: 20px;
-}

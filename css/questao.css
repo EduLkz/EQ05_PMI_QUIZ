@@ -1,260 +1,294 @@
-section{
+/* Define um display flex para elementos dentro da tag <section> e centraliza seu conteúdo */
+section {
     display: flex;
     justify-content: center;
 }
 
-.main{
+/* Configurações para a classe 'main' */
+.main {
+    /* Define um display flex para o elemento com alinhamento central */
     display: flex;
     align-content: center;
-    width: 95vw;
+    width: 95vw; /* Define a largura como 95% da largura da viewport */
 }
 
-.nav{
-    width: 250px;
-    min-width: 250px;
-    margin-left: 15px;
+/* Estilo para a classe 'nav' */
+.nav {
+    width: 250px; /* Define a largura fixa do elemento */
+    min-width: 250px; /* Define a largura mínima para o elemento */
+    margin-left: 15px; /* Define uma margem à esquerda de 15px */
 }
 
-#nav-botoes{
+/* Estilo para o ID 'nav-botoes' */
+#nav-botoes {
+    /* Configura um display flex para os elementos, espaçando-os igualmente */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adiciona uma margem na parte inferior de 10px */
 }
 
-#nav-botoes button{
-    width: 110px;
-    height: 35px;
+/* Estilo para os botões dentro de '#nav-botoes' */
+#nav-botoes button {
+    width: 110px; /* Define a largura dos botões */
+    height: 35px; /* Define a altura dos botões */
 }
 
-.botao-base{
-    border: none;
-    cursor: pointer;
-    background-color: #D3D3D3;
+/* Estilos para a classe 'botao-base' */
+.botao-base {
+    border: none; /* Remove a borda dos botões */
+    cursor: pointer; /* Altera o cursor ao passar por cima dos botões */
+    background-color: #D3D3D3; /* Define a cor de fundo padrão dos botões */
 }
 
-.botao-base:disabled{
-    border: none;
-    cursor: default;
-    background-color: transparent;
-    color: transparent;
+/* Estilos para o estado 'disabled' dos botões */
+.botao-base:disabled {
+    border: none; /* Remove a borda quando o botão está desabilitado */
+    cursor: default; /* Define o cursor padrão quando o botão está desabilitado */
+    background-color: transparent; /* Torna o fundo transparente quando o botão está desabilitado */
+    color: transparent; /* Torna o texto transparente quando o botão está desabilitado */
 }
 
+/* Estilos para o estado 'hover' e 'focus' dos botões habilitados */
 .botao-base:hover:enabled,
-.botao-base:focus:enabled{
-    border: none;
-    cursor: pointer;
-    background-color: #8EBDF3;
-    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3);
+.botao-base:focus:enabled {
+    border: none; /* Remove a borda quando o botão está em foco ou hover */
+    cursor: pointer; /* Altera o cursor quando o botão está em foco ou hover */
+    background-color: #8EBDF3; /* Define a cor de fundo quando o botão está em foco ou hover */
+    box-shadow: 0 5px .8rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao botão quando está em foco ou hover */
 }
 
-.botao-base:active:enabled{
-    border: none;
-    cursor: pointer;
-    background-color: #df7631;
-    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
+/* Estilos para o estado 'active' dos botões habilitados */
+.botao-base:active:enabled {
+    border: none; /* Remove a borda quando o botão está ativo */
+    cursor: pointer; /* Altera o cursor quando o botão está ativo */
+    background-color: #df7631; /* Define a cor de fundo quando o botão está ativo */
+    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219); /* Adiciona uma sombra interna ao botão quando está ativo */
 }
 
-#nav-numeros{
-    background-color: rgb(48, 132, 163);
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 0;
-    border-radius: 0 0 8px 8px;
+/* Estilos para o ID 'nav-numeros' */
+#nav-numeros {
+    background-color: rgb(48, 132, 163); /* Define a cor de fundo */
+    width: 100%; /* Define a largura como 100% */
+    align-items: center; /* Centraliza os itens ao longo do eixo vertical */
+    display: flex; /* Configura um display flex para os elementos */
+    flex-wrap: wrap; /* Define que os elementos podem quebrar a linha conforme necessário */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 10px 0; /* Adiciona um preenchimento de 10px na parte superior e inferior */
+    border-radius: 0 0 8px 8px; /* Adiciona um arredondamento aos cantos inferiores */
 }
 
-#nav-numeros button{
-    border: none;
-    width: 35px;
-    height: 40px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-#prev{
-    border-top-left-radius: 8px;
-}
-
-#next{
-    border-top-right-radius: 8px;
-}
-
-.questao{
-    min-width: 70vw;
-    padding: 0 15px 0 10px;
-    display: flex;
-    flex-direction: column;
-    border-right: 3px solid black;
-}
-
-.questao img{
-    min-width: 50%;
-    max-width: 90%;
-}
-
-#questao-num{
-    background-color: rgb(48, 132, 163);
-    padding: 10px 15px;
-    font-weight: bolder;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.pergunta{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start space-evenly;
-    
-}
-
-.pergunta-texto{
-    max-width: calc(50% - 20px);
-    padding: 10px;
-}
-
-.fonte{
-    text-align: left;
-    font-size: 80%;
-    color: rgba(46, 46, 46, 0.767);
-    padding: 10px;
-}
-
-span{
-    font-weight: bold;
-}
-
-.unico{
-    min-width: 95.7%;
-    padding: 20px;
-}
-
-.impar{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.par{
-    background-color: rgba(0, 0, 0, 0.25);
+/* Estilos para os botões dentro de '#nav-numeros' */
+#nav-numeros button {
+    border: none; /* Remove a borda dos botões */
+    width: 35px; /* Define a largura dos botões */
+    height: 40px; /* Define a altura dos botões */
+    margin: 5px; /* Adiciona uma margem de 5px em todos os lados dos botões */
+    cursor: pointer; /* Altera o cursor ao passar por cima dos botões */
 }
 
 
-.pergunta-texto p{
-    padding-top: 10px;
-    padding-left: 15px;
-    font-size: .95em;
-    text-align: justify;
+/* Estilos para o ID 'prev' */
+#prev {
+    border-top-left-radius: 8px; /* Adiciona um raio de borda superior esquerda de 8px */
 }
 
-.enunciado{
-    margin: 20px 0 10px 0;
-    padding-left: 15px;
+/* Estilos para o ID 'next' */
+#next {
+    border-top-right-radius: 8px; /* Adiciona um raio de borda superior direita de 8px */
 }
 
-#respostas{
-    margin-top: 20px;
+/* Estilos para a classe 'questao' */
+.questao {
+    min-width: 70vw; /* Define a largura mínima como 70% da largura da viewport */
+    padding: 0 15px 0 10px; /* Adiciona preenchimento ao elemento */
+    display: flex; /* Configura um display flex para o elemento */
+    flex-direction: column; /* Define a direção da coluna para os elementos filhos */
+    border-right: 3px solid black; /* Adiciona uma borda à direita do elemento */
 }
 
-#respostas button{
-    border: none;
-    width: 100%;
-    text-align: left;
-    padding: 5px;    
-    cursor: pointer;
+/* Estilos para elementos de imagem dentro de '.questao' */
+.questao img {
+    min-width: 50%; /* Define a largura mínima da imagem como 50% */
+    max-width: 90%; /* Define a largura máxima da imagem como 90% */
 }
 
-#respostas .alternativa{
-    background-color: transparent;
+/* Estilos para o ID 'questao-num' */
+#questao-num {
+    background-color: rgb(48, 132, 163); /* Define a cor de fundo */
+    padding: 10px 15px; /* Adiciona preenchimento ao elemento */
+    font-weight: bolder; /* Define o peso da fonte como mais forte */
+    color: white; /* Define a cor do texto como branco */
+    margin-bottom: 20px; /* Adiciona uma margem inferior ao elemento */
 }
 
-#respostas .alternativa:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+/* Estilos para a classe 'pergunta' */
+.pergunta {
+    display: flex; /* Configura um display flex para o elemento */
+    flex-wrap: wrap; /* Permite que os elementos filhos quebrem a linha conforme necessário */
+    justify-content: flex-start space-evenly; /* Justifica os itens ao longo do eixo principal */
+    /* Este valor "flex-start space-evenly" parece conter um erro de sintaxe */
 }
 
-#respostas .alternativa:active{
-    background-color: rgba(0, 0, 0, 0.5);
-    color:white;
+/* Estilos para a classe 'pergunta-texto' */
+.pergunta-texto {
+    max-width: calc(50% - 20px); /* Define a largura máxima com base em cálculos */
+    padding: 10px; /* Adiciona preenchimento ao elemento */
 }
 
+/* Estilos para a classe 'fonte' */
+.fonte {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 80%; /* Define o tamanho da fonte como 80% */
+    color: rgba(46, 46, 46, 0.767); /* Define a cor do texto com transparência */
+    padding: 10px; /* Adiciona preenchimento ao elemento */
+}
 
-#respostas .selecionada{
-    background-color: rgba(0, 0, 0, 0.75);
-    color:white;
+/* Estilos para elementos de 'span' */
+span {
+    font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+/* Estilos para a classe 'unico' */
+.unico {
+    min-width: 95.7%; /* Define a largura mínima como 95.7% */
+    padding: 20px; /* Adiciona preenchimento ao elemento */
+}
+
+/* Estilos para a classe 'impar' */
+.impar {
+    background-color: rgba(0, 0, 0, 0.1); /* Define a cor de fundo com transparência */
+}
+
+/* Estilos para a classe 'par' */
+.par {
+    background-color: rgba(0, 0, 0, 0.25); /* Define a cor de fundo com transparência */
+}
+
+/* Estilos para elementos de parágrafo dentro de '.pergunta-texto' */
+.pergunta-texto p {
+    padding-top: 10px; /* Adiciona um preenchimento superior ao parágrafo */
+    padding-left: 15px; /* Adiciona um preenchimento à esquerda do parágrafo */
+    font-size: .95em; /* Define o tamanho da fonte em relação ao tamanho da fonte pai */
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Estilos para a classe 'enunciado' */
+.enunciado {
+    margin: 20px 0 10px 0; /* Adiciona margens ao redor do elemento */
+    padding-left: 15px; /* Adiciona preenchimento à esquerda do elemento */
+}
+
+/* Estilos para o ID 'respostas' */
+#respostas {
+    margin-top: 20px; /* Adiciona uma margem superior ao elemento */
+}
+
+/* Estilos para botões dentro de '#respostas' */
+#respostas button {
+    border: none; /* Remove a borda dos botões */
+    width: 100%; /* Define a largura como 100% */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 5px; /* Adiciona preenchimento ao botão */
+    cursor: pointer; /* Altera o cursor ao passar por cima dos botões */
+}
+
+/* Estilos para elementos de classe 'alternativa' dentro de '#respostas' */
+#respostas .alternativa {
+    background-color: transparent; /* Define a cor de fundo como transparente */
+}
+
+/* Estilos para elementos de classe 'alternativa' quando o cursor passa sobre eles */
+#respostas .alternativa:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Define a cor de fundo com transparência quando o cursor passa por cima */
+}
+
+/* Estilos para elementos de classe 'alternativa' quando são clicados */
+#respostas .alternativa:active {
+    background-color: rgba(0, 0, 0, 0.5); /* Define a cor de fundo com transparência quando clicado */
+    color: white; /* Define a cor do texto como branco quando clicado */
+}
+
+/* Estilos para elementos de classe 'selecionada' dentro de '#respostas' */
+#respostas .selecionada {
+    background-color: rgba(0, 0, 0, 0.75); /* Define a cor de fundo com transparência */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilos para elementos de classe 'selecionada' quando o cursor passa sobre eles */
+#respostas .selecionada:hover {
+    background-color: rgba(0, 0, 0, 0.45); /* Define a cor de fundo com transparência quando o cursor passa por cima */
+}
+
+/* Estilos para elementos de classe 'selecionada' quando são clicados */
+#respostas .selecionada:active {
+    background-color: rgba(0, 0, 0, 0.1); /* Altera a cor de fundo quando clicado */
+    color: black; /* Define a cor do texto como preto quando clicado */
+}
+
+.acoes {
+    display: flex; /* Configura um display flex para os elementos */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    margin-top: 15px; /* Adiciona uma margem superior */
+    width: 50vw; /* Define a largura como 50% da largura da viewport */
+    align-self: center; /* Alinha o elemento ao centro verticalmente */
+}
+
+.acoes button {
+    width: 200px; /* Define a largura dos botões */
+    padding: 10px; /* Adiciona preenchimento aos botões */
+    margin: 0 2px; /* Adiciona margem nos lados dos botões */
+    border: none; /* Remove a borda dos botões */
+    cursor: pointer; /* Altera o cursor ao passar por cima dos botões */
 
 }
 
-#respostas .selecionada:hover{
-    background-color: rgba(0, 0, 0, 0.45);
+#finalizar {
+    border-top-left-radius: 8px; /* Define o raio da borda superior esquerda */
+    border-bottom-left-radius: 8px; /* Define o raio da borda inferior esquerda */
 }
 
-#respostas .selecionada:active{
-    background-color: rgba(0, 0, 0, 0.1);
-    color:black;
+#confirmar {
+    border-top-right-radius: 8px; /* Define o raio da borda superior direita */
+    border-bottom-right-radius: 8px; /* Define o raio da borda inferior direita */
 }
 
-
-
-.acoes{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    width: 50vw;
-    align-self: center;
+dialog {
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    background-color: rgba(0, 0, 0, 0.75); /* Define a cor de fundo com transparência */
+    border: none; /* Remove a borda */
+    z-index: 2; /* Define a posição no eixo Z */
+    position: fixed; /* Define a posição fixa */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
-.acoes button{
-    width: 200px;
-    padding: 10px;
-    margin: 0 2px;
-    border: none;
-    cursor: pointer;
+dialog .content {
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    display: flex; /* Configura um display flex para o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-#finalizar{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-#confirmar{
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-dialog{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    border: none;
-    z-index: 2;
-    position: fixed;
-    top: 0;bottom: 0;right: 0;left: 0;
-}
-
-dialog .content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-dialog #correta{
-    background-color: rgb(124, 204, 124);
-    width: 60vw;
-    
-    border-radius: 25px;
-    box-shadow: 0px 20px 35px black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 35px;
-    color: #222;
+dialog #correta {
+    background-color: rgb(124, 204, 124); /* Define a cor de fundo */
+    width: 60vw; /* Define a largura como 60% da largura da viewport */
+    border-radius: 25px; /* Define o raio da borda */
+    box-shadow: 0px 20px 35px black; /* Adiciona sombra */
+    display: flex; /* Configura um display flex para o elemento */
+    flex-direction: column; /* Define a direção da coluna para os elementos filhos */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 15px 35px; /* Adiciona preenchimento */
+    color: #222; /* Define a cor do texto */
 }
 
 dialog #errada{
-    background-color: rgb(204, 124, 124);
+    background-color: rgb(204, 124, 124);/* Define a cor de fundo */
+    /* Estilos semelhantes ao ID 'correta' */
     width: 60vw;
-    
     border-radius: 25px;
     box-shadow: 0px 20px 35px black;
     display: flex;
@@ -265,10 +299,11 @@ dialog #errada{
 }
 
 dialog #vazia, dialog #stats{
+    /* Define a cor de fundo */
     background-color: rgb(165, 165, 165);
+    /* Estilos semelhantes ao ID 'correta' */
     width: 60vw;
     min-height: 150px;
-    
     border-radius: 25px;
     box-shadow: 0px 20px 35px black;
     display: flex;
@@ -280,10 +315,11 @@ dialog #vazia, dialog #stats{
 }
 
 dialog #confirmFinish{
+    /* Define a cor de fundo */
     background-color: rgb(241, 158, 102);
+    /* Estilos semelhantes aos IDs 'correta', 'errada', 'vazia' e 'stats' */
     width: 60vw;
     min-height: 150px;
-    
     border-radius: 25px;
     box-shadow: 0px 20px 35px black;
     display: flex;
@@ -294,32 +330,33 @@ dialog #confirmFinish{
     color: #222;
 }
 
-dialog #confirmFinish button{
-    display: inline;
+dialog #confirmFinish button {
+    display: inline; /* Define os botões como elementos de linha */
 }
 
-dialog #stats button, dialog #confirmFinish button{
-    padding: 10px 30px;
+dialog #stats button,
+dialog #confirmFinish button {
+    padding: 10px 30px; /* Adiciona preenchimento aos botões */
 }
 
-dialog #stats p{
-    font-size: 25px;
-    justify-self: center;
-    
+dialog #stats p {
+    font-size: 25px; /* Define o tamanho da fonte */
+    justify-self: center; /* Centraliza o texto horizontalmente */
+
 }
 
-dialog img{
-    height: 250px;
+dialog img {
+    height: 250px; /* Define a altura da imagem */
 }
 
 dialog p {
-    margin: 10px;
+    margin: 10px; /* Adiciona margem ao redor do parágrafo */
 }
 
-dialog .acoes{
-    width: 60%;
+dialog .acoes {
+    width: 60%; /* Define a largura como 60% */
 }
 
-.plot-container .plotly{
-    min-height: 150px;
+.plot-container .plotly {
+    min-height: 150px; /* Define a altura mínima */
 }
