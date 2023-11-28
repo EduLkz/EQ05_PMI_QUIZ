@@ -102,7 +102,7 @@ const prevQuestionValue = checkPrevQuestion(); //Verifica questões anteriores n
 if(prevQuestionValue === undefined){ //Caso não tenho perguntas anteriores não respondidas, desativa opção de voltar
     navPrev.setAttribute("disabled", "");
     navPrevBar.setAttribute("disabled", "");
-}
+} 
 
 //Caso não tenho perguntas anteriores não respondidas, desativa opção de avançar
 if(nextQuestionValue === undefined){
@@ -279,7 +279,7 @@ function confirmarQuestao(){
         localStorage.setItem("perguntasRespondidas", JSON.stringify(questionsAswered));
         
         modal.show();
-    }else if(alternativaSelecionada === null){
+    }else if(alternativaSelecionada == null){
         //Esse else esta ligado ao primeiro if, ou seja, se nada dentro do if for verdadeiro
         //no caso de quando o usuário não respondeu nenhuma alternativa, abre um pop-up
         //que solicita que ele a responda, apenas com um botão de fechar o pop-up
