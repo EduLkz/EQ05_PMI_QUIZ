@@ -114,3 +114,10 @@ h2 {
 .fonteAutores {
     margin-bottom: 30px; /* Margem inferior */
 }
+
+.container p{
+    color: rgb(63, 62, 62);
+    font-size: 150%;
+    margin: 0 6vw;
+    text-align: justify;
+}

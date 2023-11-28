@@ -74,7 +74,7 @@ function drawGraphs(question){
 
     //Configuração da tabela
     var layout = {
-        title:"<b>QUESTÃO " + (question + 1) + "</b>",
+        title:"<b>TOTAL DE RESPOSTAS POR ALTERNATIVA DA QUESTÃO " + (question + 1) + "</b>",
         paper_bgcolor: 'rgba(0, 0, 0, 0)',
         plot_bgcolor: '#e1e1e1',
     };

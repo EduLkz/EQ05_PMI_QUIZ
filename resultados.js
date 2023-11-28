@@ -57,7 +57,7 @@ function createGraphTotal(){ //Criação de grafico de acertos e erros
     var yArray = [parseInt(certas), (35-certas)];
     var markerColor = ['rgb(124, 204, 124)', 'rgb(204, 124, 124)'];
 
-    var layout = {title:"<b>Total de acertos e erros</b>"};
+    var layout = {title:"<b>Total de acertos e erros do candidato</b>"};
 
 	var data = [{
         x:xArray, 
@@ -181,3 +181,6 @@ function gabarito(){
     const url = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_licenciatura_letras_portugues_e_ingles.pdf";
     window.open(url, "_blank").focus();
 }
+
+const gabaritoResp = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+
