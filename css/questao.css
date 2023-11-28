@@ -239,6 +239,7 @@ span {
     margin: 0 2px; /* Adiciona margem nos lados dos botões */
     border: none; /* Remove a borda dos botões */
     cursor: pointer; /* Altera o cursor ao passar por cima dos botões */
+
 }
 
 #finalizar {
@@ -341,6 +342,7 @@ dialog #confirmFinish button {
 dialog #stats p {
     font-size: 25px; /* Define o tamanho da fonte */
     justify-self: center; /* Centraliza o texto horizontalmente */
+
 }
 
 dialog img {

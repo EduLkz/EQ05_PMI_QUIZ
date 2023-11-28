@@ -121,3 +121,8 @@ h2 {
     margin: 0 6vw;
     text-align: justify;
 }
+#selecao-graph button:active{
+    background-color: #df7631;
+    box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
+}
+
