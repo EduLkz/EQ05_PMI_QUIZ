@@ -35,9 +35,11 @@ const allQuestions = [
     [34, 'c', [0.52, 0.26, 0.1, 0.0, 0.12]],
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
+const gabaritoFinal = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
 const graphDiv = document.getElementById('graficos');
 const graphTotal = document.getElementById('graph-total');
 const navGraph = document.getElementById("selecao-graph");
+const gabaritoTable = document.getElementById("tabelaGabarito");
 var showingGraph = 0;
 
 certas = localStorage.getItem("certas");
@@ -148,12 +150,51 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de 
 	Plotly.newPlot(div, data, layout, {staticPlot: true}); 
 }
 
+function createGabaritoUser(){
+    for (let i = 0; i < gabaritoFinal.length; i++) {
+        let row = document.createElement("tr");
+
+        let color = (respostas[i] === gabaritoFinal[i])? '#95e195' : '#e19595'
+        
+
+        let cellNum = document.createElement("td");
+        let cellTextNum = document.createTextNode(i + 1);
+
+        cellNum.appendChild(cellTextNum);
+        row.appendChild(cellNum);
+
+        let cell = document.createElement("td");
+        let cellText = document.createTextNode(gabaritoFinal[i].toUpperCase());
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+
+        let cellUser = document.createElement("td");
+        let userAnswer = respostas[i];
+
+        if(respostas[i] === null || respostas[i] === undefined){
+            userAnswer = '--'
+            color = '#e1e1e1';
+        }
+
+        let cellTextUser = document.createTextNode(userAnswer.toUpperCase());
+
+        cellUser.appendChild(cellTextUser);
+        row.appendChild(cellUser);
+
+        row.style.backgroundColor = color;
+
+        gabaritoTable.children[1].appendChild(row);
+    }
+}
+
 for (let i = 0; i < allQuestions.length; i++) {
     createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);
 }
 
 createGraphTotal();
 ShowGraph(0);
+createGabaritoUser();
 
 //Mostra grafico da questão escolhida
 function ShowGraph(num){

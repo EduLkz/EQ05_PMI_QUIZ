@@ -70,7 +70,7 @@ td {
 
 /* Estilos para a lista não ordenada com ID 'selecao-graph' */
 #selecao-graph {
-    width: 80%; /* Largura */
+    width: 75%; /* Largura */
     height: 120px; /* Altura */
     display: flex; /* Usa o modelo de layout flexível */
     justify-content: center; /* Centraliza horizontalmente */
@@ -126,3 +126,54 @@ h2 {
     box-shadow: inset 0 5px 1rem rgba(0, 0, 0, 0.219);
 }
 
+table{
+    text-align: center;
+    border-collapse: collapse;
+    width: 300px;
+}
+
+table, td , tr, th{
+    border: solid 1px black;
+    padding: 5px 10px;
+}
+
+.legenda{
+    font-size: 90%;
+    color: #4b4b4b;
+    width: 450px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.legenda-resposta{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(48, 132, 163);
+}
+
+.legenda-acerto{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(124, 204, 124);
+}
+
+.legenda-erro{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(204, 124, 124);
+}
+
+.fonteAutores{
+    margin-top: 25px;
+}
+
+#selecao-graph{
+    margin: 50px auto;
+}
+
+.gabaritoDesempenho{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
