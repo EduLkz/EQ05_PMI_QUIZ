@@ -207,7 +207,7 @@ function redirectToQuestion(num){
 //próxima, se ele estiver na 35 que é a última questão, a função finaliza a prova
 //vai para página de resultados
 function nextQuestion(){
-    if(nextQuestionValue + 1 < 35){
+    if(nextQuestionValue + 1 < 36){
         window.location.href = "/questões/questao-" + (nextQuestionValue + 1) + ".html";
     }else{
         //função que finaliza a prova e encaminha para página de resultados
@@ -301,7 +301,7 @@ function checkNextQuestion(){
 
         i++;
     }
-
+    console.log(nextQ);
     nextQ = (nextQ === 35) ? undefined : nextQ;
 
     return nextQ;

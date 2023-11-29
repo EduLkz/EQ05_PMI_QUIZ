@@ -35,7 +35,7 @@ const allQuestions = [
     [34, 'c', [0.52, 0.26, 0.1, 0.0, 0.12]],
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
-const gabaritoFinal = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+const gabaritoResp = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
 
 const graphDiv = document.getElementById('graficos');
 const graphTotal = document.getElementById('graph-total');
@@ -57,7 +57,7 @@ erros.textContent = (35-certas);
 
 function createGraphTotal(){ //Criação de grafico de acertos e erros
     var xArray = ["Acertos", "Erros"];
-    console.log(35 - certas);
+    
     var yArray = [parseInt(certas), (35-certas)];
     var markerColor = ['rgb(124, 204, 124)', 'rgb(204, 124, 124)'];
 
@@ -153,10 +153,10 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de 
 }
 
 function createGabaritoUser(){  //Criação da tabela de gabarito
-    for (let i = 0; i < gabaritoFinal.length; i++) {
+    for (let i = 0; i < gabaritoResp.length; i++) {
         let row = document.createElement("tr"); //cria linha
 
-        let color = (respostas[i] === gabaritoFinal[i])? '#95e195' : '#e19595' //define cor da linha como cor de acerto ou erro
+        let color = (respostas[i] === gabaritoResp[i])? '#95e195' : '#e19595' //define cor da linha como cor de acerto ou erro
 
         let cellNum = document.createElement("td");         //cria coluna e texto com numero da questão
         let cellTextNum = document.createTextNode(i + 1);
@@ -165,7 +165,7 @@ function createGabaritoUser(){  //Criação da tabela de gabarito
         row.appendChild(cellNum);
 
         let cell = document.createElement("td");         //cria coluna e texto com resposta da questão
-        let cellText = document.createTextNode(gabaritoFinal[i].toUpperCase());
+        let cellText = document.createTextNode(gabaritoResp[i].toUpperCase());
 
         cell.appendChild(cellText);
         row.appendChild(cell);
@@ -193,9 +193,6 @@ for (let i = 0; i < allQuestions.length; i++) {
     createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);     //cria tabela de todas perguntas
 }
 
-createGraphTotal();
-ShowGraph(0);
-createGabaritoUser();
 
 //Mostra grafico da questão escolhida
 function ShowGraph(num){
@@ -224,5 +221,6 @@ function gabarito(){
     window.open(url, "_blank").focus();
 }
 
-const gabaritoResp = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
-
+createGraphTotal();
+ShowGraph(0);
+createGabaritoUser();

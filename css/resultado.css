@@ -1,10 +1,13 @@
+.container{
+    width: 100%;
+}
 /* Estilos para o container */
 section .container {
     display: flex; /* Usa o modelo de layout flexível */
     margin-bottom: 60px; /* Margem inferior */
     flex-direction: column; /* Organiza os elementos filhos em coluna */
     align-items: center; /* Alinha os itens centralmente */
-    max-width: 1280px; /* Largura máxima do contêiner */
+    
     width: 100%; /* Largura total */
     margin: 0; /* Zera as margens */
 }
