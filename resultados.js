@@ -36,10 +36,12 @@ const allQuestions = [
     [35, 'e', [0.62, 0.22, 0.07, 0.01, 0.08]]
 ]
 const gabaritoFinal = ["e","c","b","b","a","a","c","d","d","a","c","a","b","d","c","c","e","b","d","e","b","a","a","e","d","b","e","c","a","d","d","a","c","c","e"];
+
 const graphDiv = document.getElementById('graficos');
 const graphTotal = document.getElementById('graph-total');
 const navGraph = document.getElementById("selecao-graph");
 const gabaritoTable = document.getElementById("tabelaGabarito");
+
 var showingGraph = 0;
 
 certas = localStorage.getItem("certas");
@@ -83,10 +85,10 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de 
     var markerColor = [];
 
     for (let index = 0; index < 5; index++) {
-        markerColor.push('rgb(204, 124, 124)');
+        markerColor.push('rgb(204, 124, 124)');     //Cor de erro em todas as alternativas da tabela
     }
-    var acertoCor = 'rgb(124, 204, 124)';
-    var meuCor = 'rgb(48, 132, 163)';
+    var acertoCor = 'rgb(124, 204, 124)';   //define cor de acerto
+    var meuCor = 'rgb(48, 132, 163)';   //define cor da resposta
     
     //Ajusta cor da resposta correta
     switch (answer) {
@@ -140,41 +142,40 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de 
             opacity: 1,
         },
         type:"bar"
-    }];
+    }]; //cria objeto de informações para criação da tabela
 
 
-    const div = document.createElement('div');
-    div.style.display = 'none';
-    graphDiv.appendChild(div);
+    const div = document.createElement('div');  //cria div da tabela
+    div.style.display = 'none';     //deixa tabela invisivel
+    graphDiv.appendChild(div);  //adiciona tabela como filha da div de graficos
 
-	Plotly.newPlot(div, data, layout, {staticPlot: true}); 
+	Plotly.newPlot(div, data, layout, {staticPlot: true}); //cria tabela
 }
 
-function createGabaritoUser(){
+function createGabaritoUser(){  //Criação da tabela de gabarito
     for (let i = 0; i < gabaritoFinal.length; i++) {
-        let row = document.createElement("tr");
+        let row = document.createElement("tr"); //cria linha
 
-        let color = (respostas[i] === gabaritoFinal[i])? '#95e195' : '#e19595'
-        
+        let color = (respostas[i] === gabaritoFinal[i])? '#95e195' : '#e19595' //define cor da linha como cor de acerto ou erro
 
-        let cellNum = document.createElement("td");
+        let cellNum = document.createElement("td");         //cria coluna e texto com numero da questão
         let cellTextNum = document.createTextNode(i + 1);
 
         cellNum.appendChild(cellTextNum);
         row.appendChild(cellNum);
 
-        let cell = document.createElement("td");
+        let cell = document.createElement("td");         //cria coluna e texto com resposta da questão
         let cellText = document.createTextNode(gabaritoFinal[i].toUpperCase());
 
         cell.appendChild(cellText);
         row.appendChild(cell);
 
-        let cellUser = document.createElement("td");
+        let cellUser = document.createElement("td");         //cria coluna e texto com reposta da usuario
         let userAnswer = respostas[i];
 
-        if(respostas[i] === null || respostas[i] === undefined){
-            userAnswer = '--'
-            color = '#e1e1e1';
+        if(respostas[i] === null || respostas[i] === undefined){    //caso a pergunta não esteja respondida
+            userAnswer = '--';      //Define texto a ser exibido
+            color = '#e1e1e1';      //Define cor cinza de não respondida
         }
 
         let cellTextUser = document.createTextNode(userAnswer.toUpperCase());
@@ -189,7 +190,7 @@ function createGabaritoUser(){
 }
 
 for (let i = 0; i < allQuestions.length; i++) {
-    createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);
+    createGraphs(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2], respostas[i]);     //cria tabela de todas perguntas
 }
 
 createGraphTotal();
