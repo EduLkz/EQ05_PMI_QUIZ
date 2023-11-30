@@ -22,7 +22,7 @@ section button {
     background-color: rgb(48, 132, 163); /* Cor de fundo do botão */
     border: solid rgb(48, 132, 163); /* Estilo da borda do botão */
     padding: 5px; /* Preenchimento interno do botão */
-    border-radius: 10%; /* Borda arredondada do botão */
+    border-radius: 15px; /* Borda arredondada do botão */
     color: white; /* Cor do texto */
     font-family: 'Aref Ruqaa Ink', serif; /* Fonte do texto */
     font-size: 20px; /* Tamanho da fonte */
@@ -61,3 +61,10 @@ Oferecendo feedback visual ao usuário sobre a interação com o elemento.*/
     border: rgba(48, 132, 163, 0.459); /* Estilo da borda com transparência */
 }
 
+.links ul {
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    list-style: none; /* Remove os estilos de lista */
+    gap: 15px;
+}

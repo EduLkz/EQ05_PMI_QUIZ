@@ -37,8 +37,7 @@ const resGabarito = [
     "c) III. \'Em suas respostas, Andrea e Cíntia expressam a ideia de liderança a partir de um de seus aspectos, o interpessoal, embora outros fatores relevantes interfiram na gestão escolar, como o administrativo e/ou o pedagógico.\' e IV. \'As afirmações das participantes relacionam a liderança a uma capacidade de convencimento e a uma habilidade inata do líder – concepções já ultrapassadas pelas investigações educacionais sobre o tema no cenário contemporâneo.\'.",
     "e) II. \'Ciberdemocracia, democracia informacional e ciberativismo podem ser classificados como movimentos advindos da virtualidade.\', IV. \'Tempo e espaço são conceitos a serem repensados a partir da inserção cada vez maior da virtualidade na vida social.\' e V. \'É papel do educador formar e preparar os alunos para uma atuação responsável e crítica frente à virtualidade, explorando suas potencialidades.\'."
 ]
-//variável das questões que foram respondidas
-var questionsAswered = [];
+
 
 const navNum = document.getElementById("nav-numeros");
 const navNext = document.getElementById("next");
@@ -73,6 +72,8 @@ respostaCorreta.textContent = respostaCerta;
 respostaErrada.textContent = respostaCerta;
 SetDialog();
 
+//variável das questões que foram respondidas
+var questionsAswered = [];
 var certas = 0;
 
 
@@ -112,14 +113,22 @@ if(nextQuestionValue === undefined){
 
 //Impede que o usuario acesse uma pergunta já respondida
 if(!(questionsAswered[questaoNum - 1] === undefined || questionsAswered[questaoNum - 1] === null)){
-    console.log(questionsAswered[questaoNum - 1]);
-    if(nextQuestionValue !== undefined){
-        nextQuestion();
-    }else if(prevQuestionValue != undefined){
-        prevQuestion();
-    }else{
-        finalizar();
-    }
+    console.log(alternativas[0]);
+    for (let i = 0; i < alternativas.length; i++) {
+        alternativas[i].setAttribute("disabled", "");
+        
+
+        console.log(alternativas[i].textContent);
+        if(gabarito[questaoNum - 1] === alternativas[i].id){
+            alternativas[i].style.backgroundColor = 'rgb(124, 204, 124)'
+        }else if(questionsAswered[questaoNum - 1] === alternativas[i].id){
+            alternativas[i].style.backgroundColor = 'rgb(48, 132, 163)'
+        }else{
+            alternativas[i].style.backgroundColor = 'rgb(204, 124, 124)'
+        }
+
+        
+    }   
 }
 
 //Ativa o pop-up especifico de acordo com o valor indicado
@@ -290,35 +299,35 @@ function confirmarQuestao(){
 
 //Verifica a proxima questão não respondida. Caso n tenha questão sem reposta, o valor fica como indefinido
 function checkNextQuestion(){
-    var nextQ = undefined;
-    var i = 0;
-    
-    while(nextQ === undefined && i <= (35 - questaoNum)){
-        if(questionsAswered[questaoNum + i] === undefined || questionsAswered[questaoNum + i] === null){
-            nextQ = questaoNum + i;
-            break;
-        }
+    var nextQ = (questaoNum < 35)?questaoNum:undefined;
+    //var i = 0;
 
-        i++;
-    }
-    console.log(nextQ);
-    nextQ = (nextQ === 35) ? undefined : nextQ;
+    // while(i <= (35 - questaoNum)){
+    //     // if(questionsAswered[questaoNum + i] === undefined || questionsAswered[questaoNum + i] === null){
+    //     //     nextQ = questaoNum + i;
+    //     //     break;
+    //     // }
+
+    //     i++;
+    // }
+    // console.log(nextQ);
+    // nextQ = (nextQ === 35) ? undefined : nextQ;
 
     return nextQ;
 }
 
 //Verifica a questão anterior não respondida. Caso n tenha questão sem reposta, o valor fica como indefinido
 function checkPrevQuestion(){
-    var prevQ = undefined;
-    var i = questaoNum - 1;
-    while(prevQ === undefined && i >= 1){
-        if(questionsAswered[i - 1] === undefined || questionsAswered[i - 1] === null){
-            prevQ = i - 1;
-            break;
-        }
+    var prevQ = (questaoNum - 2 >= 0)?questaoNum - 2:undefined;
+    // var i = questaoNum - 1;
+    // while(i >= 1){
+    //     // if(questionsAswered[i - 1] === undefined || questionsAswered[i - 1] === null){
+    //     //     prevQ = i - 1;
+    //     //     break;
+    //     // }
 
-        i--;
-    }
+    //     i--;
+    // }
 
     return prevQ;
 }
@@ -339,10 +348,9 @@ for (let i = 0; i < navNum.children.length; i++) {
         case false:
             navNum.children[i].style.background = 'rgb(204, 124, 124)';
             break;
-        default:
-            navNum.children[i].setAttribute("onClick", "redirectToQuestion(" + num + ")");
-            break;
     }
+
+    navNum.children[i].setAttribute("onClick", "redirectToQuestion(" + num + ")");
 }
 
 //adiciona onclick de cada alternativa

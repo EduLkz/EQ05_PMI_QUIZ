@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+button{
+    cursor: pointer;
+}
+
 /* Estilizando o corpo da página */
 body {
     min-height: 100vh; /* Define a altura mínima do corpo como 100% da altura da viewport */

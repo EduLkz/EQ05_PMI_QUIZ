@@ -132,7 +132,8 @@ function createGraphs(question, answer, valuesAnswers, myAnswer){//Criação de 
         }
     }
 
-	var layout = {title:"<b>QUESTÃO " + question + "</b>"};
+    
+	var layout = {title:"<b>TOTAL DE RESPOSTAS POR ALTERNATIVA DA QUESTÃO " + (question) + "</b>",};
 
 	var data = [{
         x:xArray, 
